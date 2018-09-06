@@ -1,0 +1,29 @@
+ @mixin transition {
+    transition: 0.4s ease-in;
+  }
+@mixin hovershadow {
+    box-shadow: 0 10px 20px $light-text-color;
+    transform: translateY(-8px);
+    @include transition;
+}
+  
+@mixin bgimage($name) {
+  $url:"../img/#{$name}.jpg";
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin img100 {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin button-bg($bg) {
+  background-color: $bg;
+  &:hover {
+    background:darken($bg,8%);
+    @include transition;
+  }
+}

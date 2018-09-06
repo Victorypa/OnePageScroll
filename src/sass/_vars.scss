@@ -1,0 +1,28 @@
+@import "mixins/mixins";
+
+$default-font: "roboto-example", sans-serif;
+$main-font: "QuattrocentoSans";
+$caption-font: "SpecialElite-Regular";
+$cabinsketch: "Cabin_Sketch";
+$sortmill: "SortsMillGoudy";
+$vidaloka: "Vidaloka-Regular";
+$volkhov: "Volkhov";
+
+$accent: orange;
+$text-color: #909091;
+$light-text-color:rgba(187, 184, 184, 0.281);
+$bgcolor: #000;
+$white: #fff;
+$def-fnz: 16px;
+$orange-hover:#D05301;
+$captionColor: #F1B930;	
+$navbar-bg: rgba(47,47,47,0.98);
+
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px;
+$grid-columns: 12;
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px);
+
+$gutter: $grid-gutter-width;
