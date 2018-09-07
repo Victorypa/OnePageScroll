@@ -3,226 +3,332 @@
 @import "fonts";
 
 ::placeholder {
-	color: #ccc;
-	@include transition;
-}
-	
-::selection {
-	background-color: $accent;
-	color: #fff;
+  color: #ccc;
+  @include transition;
 }
 
-html, body {
-	height: 100%;
+::selection {
+  background-color: $accent;
+  color: #fff;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
-	font-size: $def-fnz;
-	min-width: 320px;
-	position: relative;
-	line-height: 1.65;
-	font-family: $default-font;
-	overflow-x: hidden;
-	background-color: $bgcolor;
-	color: $text-color;
+  font-size: $def-fnz;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.65;
+  font-family: $default-font;
+  overflow-x: hidden;
+  background-color: $bgcolor;
+  color: $text-color;
 }
 
-input, textarea {
-	border: 1px solid #ccc;
-	padding: 10px;
-	outline: none;
-	@include transition;
-	&:focus:required:invalid {
-		border-color: red;
-	}
-	&:required:valid {
-		border-color: green;
-	}
+input,
+textarea {
+  border: 1px solid #ccc;
+  padding: 10px;
+  outline: none;
+  @include transition;
+  &:focus:required:invalid {
+    border-color: red;
+  }
+  &:required:valid {
+    border-color: green;
+  }
 }
 
 a {
-	text-decoration: none;
-	color: $text-color;
+  text-decoration: none;
+  color: $text-color;
 }
 
 .header {
+  position: fixed;
+  z-index: 2;
 
-	position: fixed;
-	z-index: 2;
-	
-	width: 100%;
+  width: 100%;
 
-	font-family: $main-font;
+  font-family: $main-font;
 
-	.navbar {
-		padding: .7rem 1rem;
+  .navbar {
+    padding: 0.7rem 1rem;
 
-		background-color: $navbar-bg;
-		li {
-			margin-right: 2rem;
-			&:hover, .active {
-				border-radius: 80px;
-				background-color: $orange-hover;	
-				@include hovershadow;
-			}
-		}
-		.nav-item {
-			a {
-				color: $white;
-				font-weight: bold;
-				font-size: 0.9rem;
-				text-transform: uppercase;
-				letter-spacing: 3px;
+    background-color: $navbar-bg;
+    li {
+      margin-right: 2rem;
+      &:hover,
+      .active {
+        border-radius: 80px;
+        background-color: $orange-hover;
+        @include hovershadow;
+      }
+    }
+    .nav-item {
+      a {
+        color: $white;
+        font-weight: bold;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
 
-				padding: 0.75rem 1rem;
-			}
-		}
+        padding: 0.75rem 1rem;
+      }
+    }
+  }
 
-		.btn-outline-info {
-			font-weight: bold;
-			text-transform: uppercase;
-			letter-spacing: 5px;
-			color: $white;
+  &__logo {
+    position: absolute;
+    left: 20%;
+    z-index: 2;
 
-			border: 3px solid $orange-hover;
-			position: relative;
-			transition: .2s;
-			z-index: 2;
-			span {
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				z-index: -1;
-				overflow: hidden;
-				@include transition;
-				&:before {
-					content: "";
-					position: absolute;
-					top: 0;
-					left: -200%;
-					width: 150%;
-					height: 100%;
-					background-color: $orange-hover;
-					transform: skew(-15deg,0);
-					transition: 1s;
-				 }		 
-			 }
-	
-			&:hover {
-				background-color: transparent;
-				@include hovershadow;
-				span:before {
-					left: -25%;
-				}
-			}
-			&:active, &:focus {
-				box-shadow: none;
-				&:focus {
-					border: 3px solid $orange-hover;
-					box-shadow: none;
-				}
-			}
-		}
-	}
+    display: block;
 
-	&__logo {
-		position: absolute;
-		left: 20%;
-		z-index: 2;
-	
-		display: block;
-
-		width: 70px;
-		height: 80px;
-		img {
-			@include img100;
-			cursor: pointer;
-			&:hover {
-				@include hovershadow;
-			}
-		}
-	}
+    width: 70px;
+    height: 80px;
+    img {
+      @include img100;
+      cursor: pointer;
+      &:hover {
+        @include hovershadow;
+      }
+    }
+  }
 }
 
 .onepage-pagination {
-	li {
-		a {
-			&:before {
-				background-color: $white;
-			}		
-			&.active:before {
-				border: 2px solid $white;
-				background-color: $white;
-			}
-		}
-	}
+  li {
+    a {
+      &:before {
+        background-color: $white;
+      }
+      &.active:before {
+        border: 2px solid $white;
+        background-color: $white;
+      }
+    }
+  }
 }
 
-.fox { 
-	@include bgimage('fox');
-	background-position-x: 20%;
-
+.fox {
+  @include bgimage("fox");
+  background-position-x: 20%;
 }
-.cat { 
-	@include bgimage('leocat');
-	background-position-x: 75%;
-	.socials {
-		padding-bottom: 10px;
-	}
 
-	.fa {
-		font-size: 2rem;
+.cat {
+  @include bgimage("leocat");
+  background-position-x: 75%;
+  .social-icons {
+    li {
+      list-style: none;
+      margin: 0.15em;
+      position: relative;
+      font-size: 1.2em;
+    }
 
-		padding-left: 10px;
+    i {
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      margin-top: -10px;
+      left: 50%;
+      margin-left: -8px;
+      @include transition;
+    }
 
-		cursor: pointer;
-		&:hover {
-			color: $white;
+    a {
+      display: block;
+      &:before {
+        content: " ";
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        display: block;
+        transition: all 0.3s ease-out;
+      }
+      &:hover i {
+        transform: scale(1.3);
+        @include transition;
+      }
+      &.social-square {
+        &:before {
+          background: linear-gradient(45deg, $orange-hover, $captionColor);
+          border-radius: 10%;
+        }
+      }
+      &:hover {
+        &:before {
+          transform: rotate(-180deg);
+          border-radius: 100%;
+        }
+      }
+    }
+  }
 
-			@include transition;
-		}
-	}
+  .container {
+    .flipper {
+      display: none;
+      &:hover {
+        transform: rotateY(180deg);
+      }
+      position: relative;
+      width: 200px;
+      height: 200px;
+      transform-style: preserve-3d;
+      @include transition;
+      @include hovershadow;
+
+      margin-right: 30px;
+      cursor: pointer;
+      .front,
+      .back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        box-sizing: border-box;
+        padding: 40px 20px 20px;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+      .front {
+        z-index: 2;
+        transform: rotateY(0deg);
+      }
+      &__pic {
+        position: relative;
+
+        width: 130px;
+        height: 100px;
+        img {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          @include img100;
+        }
+      }
+
+      .back {
+        transform: rotateY(-180deg);
+      }
+
+      .back h2 {
+        position: relative;
+        text-transform: uppercase;
+        font-size: 1rem;
+      }
+
+      .back h2:after {
+        content: "";
+        width: 50px;
+        height: 1px;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        background: white;
+        margin-left: -25px;
+      }
+      .back p {
+        position: relative;
+        padding-top: 15px;
+      }
+    }
+  }
 }
-.bird {  
-	@include bgimage('orel');
-	background-position-x: 20%;
+
+.btn-outline-info {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: $white;
+
+  border: 3px solid $orange-hover;
+  position: relative;
+  transition: 0.2s;
+  z-index: 2;
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    overflow: hidden;
+    @include transition;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -200%;
+      width: 150%;
+      height: 100%;
+      background-color: $orange-hover;
+      transform: skew(-15deg, 0);
+      transition: 1s;
+    }
+  }
+
+  &:hover {
+    background-color: transparent;
+    @include hovershadow;
+    span:before {
+      left: -25%;
+    }
+  }
+  &:active,
+  &:focus {
+    box-shadow: none;
+    &:focus {
+      border: 3px solid $orange-hover;
+      box-shadow: none;
+    }
+  }
+}
+
+.bird {
+  @include bgimage("orel");
+  background-position-x: 20%;
 }
 
 .dog {
-	@include bgimage('dog');
+  @include bgimage("dog");
 }
 
 .primary-caption {
-	color: $captionColor;
-	display: flex;
-	align-items: center;
-	font-family: $vidaloka;
-	font-size: 0.75rem;
-	font-weight: normal;
-	text-transform: uppercase;
-	letter-spacing: 5px;
-	&:after {
-		content: '';
-		border-bottom: 1px solid $light-text-color;
-		width: 10%;
-		margin-left: 10px;
-	}
+  color: $captionColor;
+  display: flex;
+  align-items: center;
+  font-family: $vidaloka;
+  font-size: 0.75rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  &:after {
+    content: "";
+    border-bottom: 1px solid $light-text-color;
+    width: 10%;
+    margin-left: 10px;
+  }
 }
 
 .primary-desc {
-	font-size: 3.375rem;
+  font-size: 3.375rem;
 
-	font-family: $volkhov;
-	&--small {
-
-		font-size: 1.125rem;
-	}
+  font-family: $volkhov;
+  &--small {
+    font-size: 1.125rem;
+  }
 }
 
 .animation {
-	transition-duration: 1s;
+  transition-duration: 1s;
 }
 
 @import "media"; // Always at the end
