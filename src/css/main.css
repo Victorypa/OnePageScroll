@@ -166,15 +166,6 @@ a {
       width: 100%;
       height: 100%;
       cursor: pointer; }
-      .header__logo img:hover {
-        -webkit-box-shadow: 0 10px 20px rgba(187, 184, 184, 0.281);
-                box-shadow: 0 10px 20px rgba(187, 184, 184, 0.281);
-        -webkit-transform: translateY(-8px);
-            -ms-transform: translateY(-8px);
-                transform: translateY(-8px);
-        -webkit-transition: 0.6s ease-in;
-        -o-transition: 0.6s ease-in;
-        transition: 0.6s ease-in; }
 
 .onepage-pagination li a:before {
   background-color: #fff; }
@@ -244,75 +235,62 @@ a {
               transform: rotate(-180deg);
       -webkit-border-radius: 100%;
               border-radius: 100%; }
-  .cat .container .flipper {
+
+.wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0; }
+  .wrap .card {
     display: none;
+    background-color: transparent;
+    height: 250px;
     position: relative;
-    width: 200px;
-    height: 200px;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    -webkit-transition: 0.6s ease-in;
-    -o-transition: 0.6s ease-in;
-    transition: 0.6s ease-in;
-    -webkit-box-shadow: 0 10px 20px rgba(187, 184, 184, 0.281);
-            box-shadow: 0 10px 20px rgba(187, 184, 184, 0.281);
-    -webkit-transform: translateY(-8px);
-        -ms-transform: translateY(-8px);
-            transform: translateY(-8px);
-    transition: 0.6s ease-in;
-    margin-right: 30px;
-    cursor: pointer; }
-    .cat .container .flipper:hover {
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+    cursor: pointer;
+    margin-right: 30px; }
+    .wrap .card:hover .front {
       -webkit-transform: rotateY(180deg);
               transform: rotateY(180deg); }
-    .cat .container .flipper .front,
-    .cat .container .flipper .back {
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: #000;
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-      padding: 40px 20px 20px;
-      width: 100%;
-      height: 100%;
-      -webkit-backface-visibility: hidden;
-              backface-visibility: hidden; }
-    .cat .container .flipper .front {
-      z-index: 2;
-      -webkit-transform: rotateY(0deg);
-              transform: rotateY(0deg); }
-    .cat .container .flipper__pic {
-      position: relative;
-      width: 130px;
-      height: 100px; }
-      .cat .container .flipper__pic img {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 100%; }
-    .cat .container .flipper .back {
-      -webkit-transform: rotateY(-180deg);
-              transform: rotateY(-180deg); }
-    .cat .container .flipper .back h2 {
-      position: relative;
-      text-transform: uppercase;
-      font-size: 1rem; }
-    .cat .container .flipper .back h2:after {
-      content: "";
-      width: 50px;
-      height: 1px;
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      background: white;
-      margin-left: -25px; }
-    .cat .container .flipper .back p {
-      position: relative;
-      padding-top: 15px; }
+    .wrap .card:hover .back {
+      -webkit-transform: rotateY(360deg);
+              transform: rotateY(360deg); }
+  .wrap .front, .wrap .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    background-color: #000;
+    -webkit-box-shadow: 0 5px 20px #D05301;
+            box-shadow: 0 5px 20px #D05301;
+    -webkit-transition: 0.6s ease-in;
+    -o-transition: 0.6s ease-in;
+    transition: 0.6s ease-in; }
+  .wrap .front__img img {
+    width: 100%;
+    height: 100%; }
+  .wrap .back {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg); }
 
 .btn-outline-info {
   font-weight: bold;

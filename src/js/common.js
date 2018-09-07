@@ -1,5 +1,5 @@
 $(function() {
-  $(".flipper").fadeIn(3000);
+  $(".card").fadeIn(5000);
   $(".wrapper").onepage_scroll({
     sectionContainer: "section", // sectionContainer accepts any kind of selector in case you don't want to use section
     easing: "ease-in", // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
