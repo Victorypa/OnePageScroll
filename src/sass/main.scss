@@ -56,8 +56,6 @@ a {
   font-family: $main-font;
 
   .navbar {
-    padding: 0.7rem 1rem;
-
     background-color: $navbar-bg;
     li {
       margin-right: 2rem;
@@ -82,14 +80,10 @@ a {
   }
 
   &__logo {
-    position: absolute;
-    left: 20%;
-    z-index: 2;
-
     display: block;
 
-    width: 70px;
-    height: 80px;
+    width: 50px;
+    height: 60px;
     img {
       @include img100;
       cursor: pointer;
@@ -165,24 +159,35 @@ a {
       }
     }
   }
+  &__pictures {
+    width: 110px;;
+    height: 100px;
+    img {
+      border-radius: 50%;
+      @include img100;
+      &:hover {
+        @include transition;
+        cursor: pointer;
+        box-shadow: 0 5px 20px $orange-hover;
+      }
+    }
+  }
  }
 
 .wrap {
-
   position: absolute;
   width: 100%;
-  height: 100%;
   left: 0;
   top: 0;
 
   .card {
     display: none;
     background-color: transparent;
-    height: 250px;
+    height: 200px;
     position: relative;
     perspective: 1000px;
     cursor: pointer;
-   
+
     margin-right: 30px;
     &:hover .front {
       transform: rotateY(180deg);
@@ -203,16 +208,8 @@ a {
     backface-visibility: hidden;
     border-radius: 10px;
     background-color: #000;
-    box-shadow: 0 5px 20px $orange-hover;
+    padding: 15px;
     @include transition;
-  }
-  .front  {
-    &__img {
-      img {
-        @include img100;
-      }
-    }
-    
   }
   .back {
     transform: rotateY(180deg);
@@ -226,7 +223,7 @@ a {
   letter-spacing: 5px;
   color: $white;
 
-  border: 3px solid $orange-hover;
+  border: 3px solid $captionColor;
   position: relative;
   transition: 0.2s;
   z-index: 2;
@@ -246,7 +243,7 @@ a {
       left: -200%;
       width: 150%;
       height: 100%;
-      background-color: $orange-hover;
+      background-color: $captionColor;
       transform: skew(-15deg, 0);
       transition: 1s;
     }
@@ -254,7 +251,8 @@ a {
 
   &:hover {
     background-color: transparent;
-    @include hovershadow;
+    border: 3px solid $captionColor;
+    color:$navbar-bg;
     span:before {
       left: -25%;
     }
@@ -263,7 +261,7 @@ a {
   &:focus {
     box-shadow: none;
     &:focus {
-      border: 3px solid $orange-hover;
+      border: 3px solid $captionColor;
       box-shadow: none;
     }
   }
@@ -292,6 +290,14 @@ a {
     border-bottom: 1px solid $light-text-color;
     width: 10%;
     margin-left: 10px;
+  }
+  &--about {
+    &:before {
+      content: "";
+      border-bottom: 1px solid $light-text-color;
+      width: 10%;
+      margin-right: 10px;
+    }
   }
 }
 

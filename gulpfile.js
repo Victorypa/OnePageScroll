@@ -1,33 +1,33 @@
-const   gulp          = require('gulp'),
-        gutil         = require('gulp-util' ),
-        sass          = require('gulp-sass'),
-        browsersync   = require('browser-sync'),
-        concat        = require('gulp-concat'),
-        uglify        = require('gulp-uglify'),
-        del           = require('del'),
-        cleancss      = require('gulp-clean-css'),
-        cache      	  = require('gulp-cache'),
-        rename        = require('gulp-rename'),
-        autoprefixer  = require('gulp-autoprefixer'),
-        imagemin      = require('gulp-imagemin'),
-        pngquant      = require('imagemin-pngquant'),
-        notify        = require('gulp-notify');
+const gulp = require('gulp'),
+	gutil = require('gulp-util'),
+	sass = require('gulp-sass'),
+	browsersync = require('browser-sync'),
+	concat = require('gulp-concat'),
+	uglify = require('gulp-uglify'),
+	del = require('del'),
+	cleancss = require('gulp-clean-css'),
+	cache = require('gulp-cache'),
+	rename = require('gulp-rename'),
+	autoprefixer = require('gulp-autoprefixer'),
+	imagemin = require('gulp-imagemin'),
+	pngquant = require('imagemin-pngquant'),
+	notify = require('gulp-notify');
 
 gulp.task('browser-sync', () => {
-    browsersync({
-        server: {
-            baseDir: 'src'
-        },
-        notify: false,
-    })
+	browsersync({
+		server: {
+			baseDir: 'src'
+		},
+		notify: false,
+	})
 });
 
 gulp.task('sass', () => {
 	return gulp.src('src/sass/**/*.scss')
-	.pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))
-	.pipe(autoprefixer(['last 15 versions']))
-	.pipe(gulp.dest('src/css'))
-	.pipe(browsersync.reload( {stream: true} ))
+		.pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))
+		.pipe(autoprefixer(['last 15 versions']))
+		.pipe(gulp.dest('src/css'))
+		.pipe(browsersync.reload({ stream: true }))
 });
 
 gulp.task('css-libs', ['sass'], () => {
@@ -37,9 +37,9 @@ gulp.task('css-libs', ['sass'], () => {
 		'node_modules/bootstrap/dist/css/bootstrap.min.css',
 		'node_modules/onepage-scroll/onepage-scroll.css',
 	])
-	.pipe(concat('libs.min.css'))
-	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
-	.pipe(gulp.dest('src/css'))
+		.pipe(concat('libs.min.css'))
+		.pipe(cleancss({ level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
+		.pipe(gulp.dest('src/css'))
 });
 
 gulp.task('fonts', () => {
@@ -50,31 +50,30 @@ gulp.task('fonts', () => {
 gulp.task('js', () => {
 	return gulp.src([
 		'node_modules/jquery/dist/jquery.min.js',
-		
 		'node_modules/bootstrap/dist/bootstrap.min.js',
 		'node_modules/popper.js/dist/umd/popper.js',
 		'node_modules/bootstrap/js/dist/util.js',
 		'node_modules/bootstrap/js/dist/dropdown.js',
-		'node_modules/bootstrap/js/dist/modal.js',		
+		'node_modules/bootstrap/js/dist/modal.js',
 		'node_modules/bootstrap/js/dist/tooltip.js',
 		'node_modules/onepage-scroll/jquery.onepage-scroll.min.js',
 		'src/js/common.js', // Always at the end
-		])
-	.pipe(concat('scripts.min.js'))
-	.pipe(uglify())
-	.pipe(gulp.dest('src/js'))
-	.pipe(browsersync.reload({ stream: true }))
+	])
+		.pipe(concat('scripts.min.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest('src/js'))
+		.pipe(browsersync.reload({ stream: true }))
 });
 
 gulp.task('img', () => {
-	return gulp.src('src/img/**/*') 
-			.pipe(cache(imagemin({
-					interlaced: true,
-					progressive: true,
-					svgoPlugins: [{removeViewBox: false}],
-					use: [pngquant()]
-			})))
-			.pipe(gulp.dest('dist/img')); 
+	return gulp.src('src/img/**/*')
+		.pipe(cache(imagemin({
+			interlaced: true,
+			progressive: true,
+			svgoPlugins: [{ removeViewBox: false }],
+			use: [pngquant()]
+		})))
+		.pipe(gulp.dest('dist/img'));
 });
 
 gulp.task('clean', () => {
@@ -95,12 +94,12 @@ gulp.task('build', ['clean', 'img', 'sass', 'js'], () => {
 	])
 		.pipe(gulp.dest('dist/css'));
 
-	const buildFonts = gulp.src('src/fonts/**/*') 
+	const buildFonts = gulp.src('src/fonts/**/*')
 		.pipe(gulp.dest('dist/fonts'));
 
-	const buildJs = gulp.src('src/js/scripts.min.js') 
+	const buildJs = gulp.src('src/js/scripts.min.js')
 		.pipe(gulp.dest('dist/js'));
 
 	const buildHtml = gulp.src('src/*.html')
-    .pipe(gulp.dest('dist'));
+		.pipe(gulp.dest('dist'));
 });
