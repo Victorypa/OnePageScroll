@@ -179,6 +179,11 @@ a {
   background-position-x: 20%; }
 
 .cat {
+  background-image: url("../img/leocat.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center;
   background-position-x: 75%; }
   .cat .social-icons li {
     list-style: none;
