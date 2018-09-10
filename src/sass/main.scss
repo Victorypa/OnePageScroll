@@ -111,7 +111,7 @@ a {
 }
 
 .cat {
-  @include bgimage("leocat");
+  // @include bgimage("leocat");
   background-position-x: 75%;
   .social-icons {
     li {

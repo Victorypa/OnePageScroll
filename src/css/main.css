@@ -179,11 +179,6 @@ a {
   background-position-x: 20%; }
 
 .cat {
-  background-image: url("../img/leocat.jpg");
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
-  background-position: center;
   background-position-x: 75%; }
   .cat .social-icons li {
     list-style: none;
@@ -2482,7 +2477,10 @@ html {
 /*==========  Desktop First  ==========*/
 @media (max-width: 767.98px) {
   .header__logo {
-    left: 0; } }
+    left: 0; }
+  .cat__pictures {
+    width: 80px;
+    height: 70px; } }
 
 /*==========  Mobile First  ==========*/
 .img-responsive {
