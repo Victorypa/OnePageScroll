@@ -20,16 +20,10 @@
 
 //Small: ≥576px
 @include media-breakpoint-down(sm) {
-  .header {
-    &__logo {
-      left: 0;
 
-    }
-  }
   .cat__pictures {
-    width: 80px;
-    height: 70px;
-}
+    display: none;
+  }
 
 }
 

@@ -82,7 +82,7 @@ a {
   &__logo {
     display: block;
 
-    width: 50px;
+    width: 100px;
     height: 60px;
     img {
       @include img100;
@@ -113,6 +113,14 @@ a {
 .cat {
   @include bgimage("leocat");
   background-position-x: 75%;
+  &__content {
+    position: absolute;
+    left: -35%;
+    &.active {
+      transition-duration: 1s;
+      left: 0;
+    }
+  }
   .social-icons {
     li {
       list-style: none;
@@ -207,7 +215,7 @@ a {
     justify-content: center;
     backface-visibility: hidden;
     border-radius: 10px;
-    background-color: #000;
+    background-color: $content-bg;
     padding: 15px;
     @include transition;
   }
@@ -260,12 +268,18 @@ a {
   &:active,
   &:focus {
     box-shadow: none;
+  }
+  &:not(:disabled):not(.disabled):active {
+    border: 3px solid $captionColor;
+    background-color: transparent;
+    box-shadow: none;
     &:focus {
-      border: 3px solid $captionColor;
       box-shadow: none;
     }
   }
 }
+
+
 
 .bird {
   @include bgimage("orel");
@@ -291,6 +305,7 @@ a {
     width: 10%;
     margin-left: 10px;
   }
+
   &--about {
     &:before {
       content: "";
@@ -299,6 +314,7 @@ a {
       margin-right: 10px;
     }
   }
+
 }
 
 .primary-desc {
@@ -312,6 +328,10 @@ a {
 
 .animation {
   transition-duration: 1s;
+}
+
+.main-content {
+  font-size: 0.8rem;
 }
 
 @import "media"; // Always at the end
