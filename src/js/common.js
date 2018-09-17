@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
   var contentAnimation = $('.cat__content');
   contentAnimation.addClass('active');
   $(".card").fadeIn(5000);
@@ -9,12 +9,12 @@ $(function() {
     animationTime: 800, // AnimationTime let you define how long each section takes to animate
     pagination: true, // You can either show or hide the pagination. Toggle true for show, false for hide.
     updateURL: false, // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-    beforeMove: function(index) {
+    beforeMove: function (index) {
       $(".animation").css({
         transform: "scale(0.7)"
       });
     }, // This option accepts a callback function. The function will be called before the page moves.
-    afterMove: function(index) {
+    afterMove: function (index) {
       $(".animation").css({
         transform: "scale(1)"
       });
@@ -26,5 +26,13 @@ $(function() {
     // the browser's width is less than 600, the fallback will kick in.
     direction: "vertical" // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
   });
+
+  $('.hamburger-button').on('click', function (event) {
+    event.preventDefault();
+    $('.mobile-menu').toggleClass('show');
+    $(this).toggleClass('active');
+    $('.overlay').toggleClass('visible');
+  });
+
 
 });

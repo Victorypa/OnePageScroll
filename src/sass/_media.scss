@@ -13,15 +13,23 @@
 
 }
 
+
 //Medium: ≥768px
 @include media-breakpoint-down(md) {
-
+  .header {
+    &-menu {
+      &__item {
+        a {
+          font-size: 0.86rem;
+        }
+      }
+    }
+  }
 }
 
 //Small: ≥576px
 @include media-breakpoint-down(sm) {
-
-  .cat__pictures {
+  .header-wrapper {
     display: none;
   }
 

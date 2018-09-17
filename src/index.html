@@ -20,86 +20,146 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12 px-0">
-                    <nav class="navbar navbar-dark navbar-expand-lg">
-                        <div class="col-2 col-sm-auto align-self-start">
-                            <a class="header__logo">
-                                <img src="img/logo1.png" alt="logo">
-                            </a>
-                        </div>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
-                            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
 
-                        <div class="collapse navbar-collapse py-sm-3 py-lg-0" id="navbarColor01">
-                            <ul class="navbar-nav mr-auto ml-md-5">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Species<span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">About us</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Our work</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Get involved</a>
-                                </li>
-                            </ul>
-                            <form class="form-inline px-3">
-                                <button class="btn btn-outline-info my-2 my-sm-0">Donate<span></span></button>
-                            </form>
-                        </div>
-                    </nav>
+    <div class="modal fade" id="donateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-warning modal-dialog-centered" role="document">
+            <!--Content-->
+            <div class="modal-content modal-donate">
+                <!--Header-->
+                <div class="modal-header text-center ">
+                    <h4 class="modal-title white-text w-100 font-weight-bold py-2 modal-donate__title">Send a donation</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                </div>
+
+                <!--Body-->
+                <div class="modal-body">
+                    <div class="md-form mb-5">
+                        <i class="fa fa-user"></i>
+                        <input type="text" class="w-75 mx-2" id="form3">
+                        <label data-error="wrong" for="form3">Your name</label>
+                    </div>
+
+                    <div class="md-form">
+                        <i class="fa fa-envelope"></i>
+                        <input type="email" class="w-75 mx-2" id="form2">
+                        <label data-error="wrong" for="form2">Your email</label>
+                    </div>
+                </div>
+
+                <!--Footer-->
+                <div class="modal-footer justify-content-center">
+                    <button class="col-auto primary-button">Donate<span></span></button>
                 </div>
             </div>
+            <!--/.Content-->
         </div>
+    </div>
+
+    <header class="header">
+        <div class="container-fluid px-0">
+            <div class="row header-wrapper align-items-center justify-content-between px-4">
+                <div class="col-2">
+                    <a href="#" class="header__logo">
+                        <img src="img/logo1.png" alt="logo">
+                    </a>
+                </div>
+
+                <ul class="col-8 header-menu d-flex mb-0 px-0 align-items-center">
+                    <li class="header-menu__item">
+                        <a href="#">Species</a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="#">About us</a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="#">Our work</a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="#">Get involved</a>
+                    </li>
+                </ul>
+
+                <div class="col-2 text-right">
+                    <button class="col-auto primary-button" data-toggle="modal" data-target="#donateModal">Donate<span></span></button>
+                </div>
+
+            </div>
+
+            <div class="mobile-menu text-center d-sm-block d-md-none">
+                <a href="#" class="header__logo m-auto">
+                    <img src="img/logo1.png" alt="logo">
+                </a>
+
+                <ul class="mobile-menu__list px-0 align-items-center ">
+
+                    <li class="header-menu__item mobile-menu__item">
+                        <a href="#">Species</a>
+                    </li>
+                    <li class="header-menu__item mobile-menu__item">
+                        <a href="#">About us</a>
+                    </li>
+                    <li class="header-menu__item mobile-menu__item">
+                        <a href="#">Our work</a>
+                    </li>
+                    <li class="header-menu__item mobile-menu__item">
+                        <a href="#">Get involved</a>
+                    </li>
+                </ul>
+
+                <button class="primary-button my-3" data-toggle="modal" data-target="#donateModal">Donate<span></span></button>
+
+            </div>
+            <a href="#" class="hamburger-button d-sm-block d-md-none">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+
     </header>
 
     <div class="wrapper">
         <section class="cat">
-
             <div class="container-fluid h-100">
+                <div class="row">
+                    <div class="wrap col-lg-8 col-10">
 
-                <div class="row h-50 align-items-md-end align-items-center">
-                    <div class="cat__content col-12 d-flex justify-content-center">
-                        <div class="col-md-8">
-                            <h1 class="primary-caption">species</h1>
-                            <div class="primary-desc">Cat</div>
-                            <h2 class="primary-caption">status</h2>
-                            <div class="primary-desc primary-desc--small">Homeless</div>
+                        <div class="card col-lg-5 col-12">
+                            <div class="front text-justify">
+                                <span>
+                                    <h1 class="primary-caption"><i class="fa fa-paw"></i>species</h1>
+                                    <div class="primary-desc">Cat</div>
+                                    <h2 class="primary-caption"><i class="fa fa-paw"></i>status</h2>
+                                    <div class="primary-desc">Homeless</div>
+                                    <h2 class="primary-caption"><i class="fa fa-paw"></i>About</h2>
+                                    <p>Life on the streets isn’t easy for cats. While house
+                                        cats enjoy a pampered
+                                        existence, strays forced to live in the elements struggle every single day
+                                        to survive.
+                                    </p>
+                                    <i class="fa fa-paw hover-paw hover-me ml-4 d-block text-right"></i>
+                                </span>
+                            </div>
+                            <div class="back text-justify">
+                                <span class="text-center">
+                                    <p>We hope you will think of us when making gift
+                                        donations.
+                                        catadopt@shaw.ca or click button</p>
+                                    <button class="primary-button my-3" data-toggle="modal" data-target="#donateModal">Donate<span></span></button>
+                                </span>
+                            </div>
                         </div>
+                       
                     </div>
                 </div>
 
-                <div class="row h-50">
 
-                    <div class="row col-12">
-                        <div class="m-md-auto mt-5 wrap col-8 d-md-flex align-items-center">
-                            <div class="col-md-auto col-12">
-                                <div class="cat__pictures">
-                                    <img src="img/bengal1.jpg" alt="cat">
-                                </div>
-                            </div>
-                            <div class="card col-md-5 col-12 ml-md-5">
-                                <div class="front text-justify"><span>
-                                        <h2 class="primary-caption primary-caption--about justify-content-center">About</h2>
-                                        <p class="main-content">Life on the streets isn’t easy for cats. While house cats enjoy a pampered
-                                            existence, strays forced to live in the elements struggle every single day
-                                            to survive.</p>
-                                    </span></div>
-                                <div class="back text-center"><span>
-                                        <p class="main-content">We hope you will think of us when making gift donations.
-                                            catadopt@shaw.ca or click button</p>
-                                        <button class="btn btn-outline-info my-3">Donate<span></span></button>
-                                    </span></div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row h-25">
+
+
 
                     <div class="row col-12">
                         <div class="col-md-12 d-flex">
@@ -119,14 +179,14 @@
                 <div class="row bird__wrapper align-items-end">
                     <div class="col-md-4">
                         <h3 class="primary-caption">
-                            
+
                             species
                             <div class="caption-line"></div>
                         </h3>
 
                         <div class="primary-desc">Eagle</div>
                         <h2 class="primary-caption">
-                          
+
                             status
                             <div class="caption-line"></div>
                         </h2>
