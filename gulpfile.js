@@ -36,6 +36,7 @@ gulp.task('css-libs', ['sass'], () => {
 		'node_modules/font-awesome/css/font-awesome.min.css',
 		'node_modules/bootstrap/dist/css/bootstrap.min.css',
 		'node_modules/onepage-scroll/onepage-scroll.css',
+		'node_modules/lightgallery/dist/css/lightgallery.css',
 	])
 		.pipe(concat('libs.min.css'))
 		.pipe(cleancss({ level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
@@ -56,6 +57,10 @@ gulp.task('js', () => {
 		'node_modules/bootstrap/js/dist/dropdown.js',
 		'node_modules/bootstrap/js/dist/modal.js',
 		'node_modules/bootstrap/js/dist/tooltip.js',
+		'node_modules/lightgallery/dist/js/lightgallery.js',
+		'node_modules/lightgallery/modules/lg-thumbnail.min.js',
+		'node_modules/lightgallery/modules/lg-fullscreen.min.js',
+		'node_modules/lightgallery/modules/lg-zoom.min.js',
 		'node_modules/onepage-scroll/jquery.onepage-scroll.min.js',
 		'src/js/common.js', // Always at the end
 	])

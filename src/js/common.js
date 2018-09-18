@@ -33,6 +33,9 @@ $(function () {
     $(this).toggleClass('active');
     $('.overlay').toggleClass('visible');
   });
-
+  
+  $('#lightgallery').lightGallery({
+    pager: true
+  });
 
 });
