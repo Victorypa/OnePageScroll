@@ -1,6 +1,4 @@
 $(function () {
-  var contentAnimation = $('.cat__content');
-  contentAnimation.addClass('active');
   $(".card").fadeIn(5000);
   $(".wrapper").onepage_scroll({
     sectionContainer: "section", // sectionContainer accepts any kind of selector in case you don't want to use section
@@ -31,7 +29,7 @@ $(function () {
     event.preventDefault();
     $('.mobile-menu').toggleClass('show');
     $(this).toggleClass('active');
-    $('.overlay').toggleClass('visible');
+    $('.cat').toggleClass('overlay');
   });
   
   $('#lightgallery').lightGallery({

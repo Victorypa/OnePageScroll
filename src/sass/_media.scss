@@ -16,15 +16,6 @@
 
 //Medium: ≥768px
 @include media-breakpoint-down(md) {
-  .header {
-    &-menu {
-      &__item {
-        a {
-          font-size: 0.86rem;
-        }
-      }
-    }
-  }
 }
 
 //Small: ≥576px
@@ -32,7 +23,11 @@
   .header-wrapper {
     display: none;
   }
+  .gallery__list {
+    margin-right: 0;
 
+  
+  }
 }
 
 //Extra small: >0

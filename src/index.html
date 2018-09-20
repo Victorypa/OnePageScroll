@@ -2,257 +2,252 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Template Basic Images Start -->
-    <meta property="og:image" content="path/to/image.jpg">
-    <link rel="icon" href="img/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
-    <!-- Template Basic Images End -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Template Basic Images Start -->
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="icon" href="img/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+  <!-- Template Basic Images End -->
 
-    <!-- Custom Browsers Color Start -->
-    <meta name="theme-color" content="#0083ff">
-    <!-- Custom Browsers Color End -->
-    <link rel="stylesheet" href="css/libs.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Document</title>
+  <!-- Custom Browsers Color Start -->
+  <meta name="theme-color" content="#0083ff">
+  <!-- Custom Browsers Color End -->
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Document</title>
 </head>
 
-<body>
+<body >
 
-    <div class="modal fade" id="donateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-notify modal-warning modal-dialog-centered" role="document">
-            <!--Content-->
-            <div class="modal-content modal-donate">
-                <!--Header-->
-                <div class="modal-header text-center ">
-                    <h4 class="modal-title white-text w-100 font-weight-bold py-2 modal-donate__title">Send a donation</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true" class="white-text">&times;</span>
-                    </button>
-                </div>
-
-                <!--Body-->
-                <div class="modal-body">
-                    <div class="md-form mb-5">
-                        <i class="fa fa-user"></i>
-                        <input type="text" class="w-75 mx-2" id="form3">
-                        <label data-error="wrong" for="form3">Your name</label>
-                    </div>
-
-                    <div class="md-form">
-                        <i class="fa fa-envelope"></i>
-                        <input type="email" class="w-75 mx-2" id="form2">
-                        <label data-error="wrong" for="form2">Your email</label>
-                    </div>
-                </div>
-
-                <!--Footer-->
-                <div class="modal-footer justify-content-center">
-                    <button class="col-auto primary-button">Donate<span></span></button>
-                </div>
-            </div>
-            <!--/.Content-->
+  <div class="modal fade" id="donateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-warning modal-dialog-centered" role="document">
+      <!--Content-->
+      <div class="modal-content modal-donate">
+        <!--Header-->
+        <div class="modal-header text-center ">
+          <h4 class="modal-title white-text w-100 font-weight-bold py-2 modal-donate__title">Send a donation</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="white-text">&times;</span>
+          </button>
         </div>
+
+        <!--Body-->
+        <div class="modal-body">
+          <div class="md-form mb-5">
+            <i class="fa fa-user"></i>
+            <input type="text" class="w-75 mx-2" id="form3">
+            <label data-error="wrong" for="form3">Your name</label>
+          </div>
+
+          <div class="md-form">
+            <i class="fa fa-envelope"></i>
+            <input type="email" class="w-75 mx-2" id="form2">
+            <label data-error="wrong" for="form2">Your email</label>
+          </div>
+        </div>
+
+        <!--Footer-->
+        <div class="modal-footer justify-content-center">
+          <button class="col-auto primary-button">Donate<span></span></button>
+        </div>
+      </div>
+      <!--/.Content-->
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container-fluid px-0">
+      <div class="row header-wrapper align-items-center justify-content-between px-4">
+        <div class="col-1 px-0">
+          <a href="#" class="header__logo">
+            <img src="img/logo1.png" alt="logo">
+          </a>
+        </div>
+        <ul class="col-8 header-menu d-flex mb-0 px-0 align-items-center">
+          <li class="header-menu__item">
+            <a href="#">Species</a>
+          </li>
+          <li class="header-menu__item">
+            <a href="#">About us</a>
+          </li>
+          <li class="header-menu__item">
+            <a href="#">Our work</a>
+          </li>
+          <li class="header-menu__item">
+            <a href="#">Get involved</a>
+          </li>
+        </ul>
+
+        <div class="col-3 d-flex justify-content-end">
+
+          <ul class="social-icons d-flex mb-0">
+            <li><a href="#" class="social-square"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#" class="social-square"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+
+          <button class="primary-button ml-3" data-toggle="modal" data-target="#donateModal">Donate<span></span></button>
+        </div>
+      </div>
+
+      <div class="mobile-menu text-center d-sm-block d-md-none">
+        <a href="#" class="header__logo m-auto">
+          <img src="img/logo1.png" alt="logo">
+        </a>
+
+        <ul class="mobile-menu__list px-0 align-items-center ">
+
+          <li class="header-menu__item mobile-menu__item">
+            <a href="#">Species</a>
+          </li>
+          <li class="header-menu__item mobile-menu__item">
+            <a href="#">About us</a>
+          </li>
+          <li class="header-menu__item mobile-menu__item">
+            <a href="#">Our work</a>
+          </li>
+          <li class="header-menu__item mobile-menu__item">
+            <a href="#">Get involved</a>
+          </li>
+        </ul>
+
+        <button class="primary-button my-3" data-toggle="modal" data-target="#donateModal">Donate<span></span></button>
+
+      </div>
+      <div class="col-2 pl-4">
+          <a href="#" class="header__logo d-md-none">
+            <img src="img/logo1.png" alt="logo">
+          </a>
+        </div>
+      <a href="#" class="hamburger-button d-sm-block d-md-none">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
     </div>
 
-    <header class="header">
-        <div class="container-fluid px-0">
-            <div class="row header-wrapper align-items-center justify-content-between px-4">
-                <div class="col-2">
-                    <a href="#" class="header__logo">
-                        <img src="img/logo1.png" alt="logo">
-                    </a>
-                </div>
+  </header>
 
-                <ul class="col-8 header-menu d-flex mb-0 px-0 align-items-center">
-                    <li class="header-menu__item">
-                        <a href="#">Species</a>
-                    </li>
-                    <li class="header-menu__item">
-                        <a href="#">About us</a>
-                    </li>
-                    <li class="header-menu__item">
-                        <a href="#">Our work</a>
-                    </li>
-                    <li class="header-menu__item">
-                        <a href="#">Get involved</a>
-                    </li>
-                </ul>
+  <div class="wrapper">
+    <section class="cat ">
+      <div class="container h-100">
 
-                <div class="col-2 text-right">
-                    <button class="col-auto primary-button" data-toggle="modal" data-target="#donateModal">Donate<span></span></button>
-                </div>
+        <div class="row">
+          <div class="card-wrapper col-12 px-0">
+            <div class="card col-lg-4 col-12">
+              <div class="front text-justify">
+                <span>
+                  <div class="front__logo">
+                    <img src="img/homeagain.png" alt="homeagainlogo">
+                  </div>
+                  <h1 class="primary-caption">species</h1>
+                  <div class="primary-desc">Cat</div>
+                  <h2 class="primary-caption">status</h2>
+                  <div class="primary-desc">Homeless</div>
+                  <h2 class="primary-caption">About</h2>
+                  <p class="primary-desc">Life on the streets isn’t easy for cats. While house
+                    cats enjoy a pampered
+                    existence, strays forced to live in the elements struggle every single day
+                    to survive.
+                  </p>
+                  <i class="fa fa-paw hover-paw hover-me d-block text-right"></i>
+                </span>
+              </div>
+              <div class="back d-flex flex-column">
+                <span class="text-center">
+                  <div class="back__logo">
+                    <img src="img/backlogo.png" alt="homeagainlogo">
+                  </div>
+                  <p class="primary-desc pt-3">We hope you will think of us when making gift
+                    donations.catadopt@shaw.ca or click button</p>
 
-            </div>
-
-            <div class="mobile-menu text-center d-sm-block d-md-none">
-                <a href="#" class="header__logo m-auto">
-                    <img src="img/logo1.png" alt="logo">
-                </a>
-
-                <ul class="mobile-menu__list px-0 align-items-center ">
-
-                    <li class="header-menu__item mobile-menu__item">
-                        <a href="#">Species</a>
-                    </li>
-                    <li class="header-menu__item mobile-menu__item">
-                        <a href="#">About us</a>
-                    </li>
-                    <li class="header-menu__item mobile-menu__item">
-                        <a href="#">Our work</a>
-                    </li>
-                    <li class="header-menu__item mobile-menu__item">
-                        <a href="#">Get involved</a>
-                    </li>
-                </ul>
-
+                </span>
                 <button class="primary-button my-3" data-toggle="modal" data-target="#donateModal">Donate<span></span></button>
-
+              </div>
             </div>
-            <a href="#" class="hamburger-button d-sm-block d-md-none">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
+          </div>
         </div>
 
-    </header>
+        <div class="row justify-content-lg-start justify-content-center">
+          <div class="gallery mt-5">
+            <ul id="lightgallery" class="d-flex flex-wrap px-3">
+            
 
-    <div class="wrapper">
-        <section class="cat">
-            <div class="container-fluid h-100">
-                <div class="row">
-                    <div class="wrap col-lg-8 col-10">
+              <li data-src="img/thumb4.jpg" class="gallery__list">
+                <a class="gallery__link" href="#">
+                  <img class="gallery__img" src="img/thumb4.jpg">
+                  <div class="gallery__overlay">
+                    <i class="fa fa-search gallery__overlay-icon"></i>
+                  </div>
+                </a>
+              </li>
 
-                        <div class="card col-lg-5 col-12">
-                            <div class="front text-justify">
-                                <span>
-                                    <h1 class="primary-caption"><i class="fa fa-paw"></i>species</h1>
-                                    <div class="primary-desc">Cat</div>
-                                    <h2 class="primary-caption"><i class="fa fa-paw"></i>status</h2>
-                                    <div class="primary-desc">Homeless</div>
-                                    <h2 class="primary-caption"><i class="fa fa-paw"></i>About</h2>
-                                    <p>Life on the streets isn’t easy for cats. While house
-                                        cats enjoy a pampered
-                                        existence, strays forced to live in the elements struggle every single day
-                                        to survive.
-                                    </p>
-                                    <i class="fa fa-paw hover-paw hover-me ml-4 d-block text-right"></i>
-                                </span>
-                            </div>
-                            <div class="back text-justify">
-                                <span class="text-center">
-                                    <p>We hope you will think of us when making gift
-                                        donations.
-                                        catadopt@shaw.ca or click button</p>
-                                    <button class="primary-button my-3" data-toggle="modal" data-target="#donateModal">Donate<span></span></button>
-                                </span>
-                            </div>
-                        </div>
+              <li data-src="img/thumb1.jpg" class="gallery__list">
+                <a class="gallery__link" href="#">
+                  <img class="gallery__img" src="img/thumb1.jpg">
+                  <div class="gallery__overlay">
+                    <i class="fa fa-search gallery__overlay-icon"></i>
+                  </div>
+                </a>
+              </li>
 
-                        <div class="page-head">
-                            
-                          <div class="gallery">
-                            <ul id="lightgallery" class="gallery__item" >
-                                
-                              <li data-responsive="img/thumb2.jpg 375, img/thumb2.jpg 480, img/thumb2.jpg 800" data-src="img/thumb2.jpg" class="gallery__list">
-                                <a class="gallery__link" href="">
-                                  <img class="img-responsive gallery__img" src="img/thumb2.jpg">
-                                  <div class="gallery__overlay">
-                                        <i class="fa fa-search gallery__overlay-icon"></i>
-                                  </div>
-                                </a>
-                                </li>
-                             
-                              <li data-responsive="img/thumb3.jpg 375, img/thumb3.jpg 480, img/thumb3.jpg 800" data-src="img/thumb3.jpg" class="gallery__list">
-                                <a class="gallery__link" href="">
-                                  <img class="img-responsive gallery__img" src="img/thumb3.jpg">
-                                  <div class="gallery__overlay">
-                                        <i class="fa fa-search gallery__overlay-icon"></i>
-                                  </div>
-                                </a>
-                              </li>
-                              <li data-responsive="https://sachinchoolur.github.io/lightGallery/static/img/13-375.jpg 375, https://sachinchoolur.github.io/lightGallery/static/img/13-480.jpg 480, https://sachinchoolur.github.io/lightGallery/static/img/13.jpg 800" data-src="https://sachinchoolur.github.io/lightGallery/static/img/13-1600.jpg"
-                              data-sub-html="<h4>Sunset Serenity</h4><p>A gorgeous Sunset tonight captured at Coniston Water....</p>" data-pinterest-text="Pin it" data-tweet-text="share on twitter " class="gallery__list">
-                                <a class="gallery__link" href="">
-                                  <img class="img-responsive gallery__img" src="img/thumb4.jpg">
-                                  <div class="gallery__overlay">
-                                        <i class="fa fa-search gallery__overlay-icon"></i>
-                                  </div>
-                                </a>
-                              </li>
-                              <li data-responsive="https://sachinchoolur.github.io/lightGallery/static/img/4-375.jpg 375, https://sachinchoolur.github.io/lightGallery/static/img/4-480.jpg 480, https://sachinchoolur.github.io/lightGallery/static/img/4.jpg 800" data-src="https://sachinchoolur.github.io/lightGallery/static/img/4-1600.jpg"
-                              data-sub-html="<h4>Coniston Calmness</h4><p>Beautiful morning</p>" data-pinterest-text="Pin it" data-tweet-text="share on twitter " class="gallery__list">
-                                <a class="gallery__link" href="">
-                                  <img class="img-responsive gallery__img" src="https://sachinchoolur.github.io/lightGallery/static/img/thumb-4.jpg">
-                                  <div class="gallery__overlay">
-                                        <i class="fa fa-search gallery__overlay-icon"></i>
-                                  </div>
-                                </a>
-                              </li>
-                            </ul>
-              
-                          </div>
+              <li data-src="img/thumb2.jpg" class="gallery__list">
+                <a class="gallery__link" href="#">
+                  <img class="gallery__img" src="img/thumb2.jpg">
+                  <div class="gallery__overlay">
+                    <i class="fa fa-search gallery__overlay-icon"></i>
+                  </div>
+                </a>
+              </li>
 
-                    </div>
+            </ul>
 
+          </div>
 
-<!-- 
-                <div class="row h-25">
+        </div>
 
-                    <div class="row col-12">
-                        <div class="col-md-12 d-flex">
-                            <ul class="social-icons d-flex align-items-end ml-auto">
-                                <li><a href="#" class="social-square"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#" class="social-square"><i class="fa fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> -->
+      </div>
+    </section>
 
-            </div>
-        </section>
+    <section class="bird animation">
+      <div class="container">
+        <div class="row bird__wrapper align-items-end">
+          <div class="col-md-4">
+            <h3 class="primary-caption">
 
-        <section class="bird animation">
-            <div class="container">
-                <div class="row bird__wrapper align-items-end">
-                    <div class="col-md-4">
-                        <h3 class="primary-caption">
+              species
+              <div class="caption-line"></div>
+            </h3>
 
-                            species
-                            <div class="caption-line"></div>
-                        </h3>
+            <div class="primary-desc">Eagle</div>
+            <h2 class="primary-caption">
 
-                        <div class="primary-desc">Eagle</div>
-                        <h2 class="primary-caption">
+              status
+              <div class="caption-line"></div>
+            </h2>
+            <div class="primary-desc primary-desc--small">Endangered</div>
+          </div>
+        </div>
+    </section>
 
-                            status
-                            <div class="caption-line"></div>
-                        </h2>
-                        <div class="primary-desc primary-desc--small">Endangered</div>
-                    </div>
-                </div>
-        </section>
+    <section class="fox">
+      <div class="container-fluid">
+        <div class="row align-items-center justify-content-center">
 
-        <section class="fox">
-            <div class="container-fluid">
-                <div class="row align-items-center justify-content-center">
+        </div>
+    </section>
 
-                </div>
-        </section>
+    <section class="dog animation">
+      <div class="container-fluid">
+        <div class="row align-items-center justify-content-center">
 
-        <section class="dog animation">
-            <div class="container-fluid">
-                <div class="row align-items-center justify-content-center">
+        </div>
+    </section>
 
-                </div>
-        </section>
-
-    </div>
-    <script src="js/scripts.min.js"></script>
+  </div>
+  <script src="js/scripts.min.js"></script>
 
 </body>
 
