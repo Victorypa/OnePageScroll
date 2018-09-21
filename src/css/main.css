@@ -194,7 +194,7 @@ a {
   -o-transition: 0.4s ease-in;
   transition: 0.4s ease-in; }
   .mobile-menu__item {
-    width: 35%;
+    width: 50%;
     margin: 20px auto; }
   .mobile-menu.show {
     -webkit-transition: 0.4s ease-in;
@@ -372,14 +372,19 @@ a {
   background-color: #fff; }
 
 .cat {
-  padding-top: 110px; }
+  padding-top: 110px;
+  background-image: url("../img/leocat.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center; }
   .cat.overlay {
     opacity: 0.3; }
 
 .card-wrapper .card {
   display: none;
   position: relative;
-  min-height: 350px;
+  min-height: 325px;
   -webkit-perspective: 1000px;
           perspective: 1000px;
   background-color: transparent;
@@ -414,10 +419,10 @@ a {
   transition: 0.4s ease-in; }
   .card-wrapper .front__logo, .card-wrapper .back__logo {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 100px;
-    height: 100px; }
+    top: 0;
+    right: 10px;
+    width: 90px;
+    height: 65px; }
     .card-wrapper .front__logo img, .card-wrapper .back__logo img {
       width: 100%;
       height: 100%; }
@@ -432,42 +437,41 @@ a {
     width: 100px;
     height: 90px; }
     .card-wrapper .back__logo img {
-      -webkit-border-radius: 30%;
-              border-radius: 30%; }
+      -webkit-border-radius: 50%;
+              border-radius: 50%; }
 
-.hover-paw {
-  width: 50px;
-  height: 30px;
-  margin: 0px auto;
+.card-wrapper .fa {
+  margin-right: 5px; }
+
+.hover-360 {
+  width: 35px;
+  height: 20px;
   -webkit-animation-name: 'hover-me';
           animation-name: 'hover-me';
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
-  -webkit-animation-iteration-count: 5;
-          animation-iteration-count: 5; }
-  .hover-paw img {
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3; }
+  .hover-360 img {
     width: 100%;
     height: 100%; }
 
 @-webkit-keyframes hover-me {
   0% {
-    color: #fff; }
-  50% {
     opacity: 0; }
   100% {
     opacity: 1; } }
 
 @keyframes hover-me {
   0% {
-    color: #fff; }
-  50% {
     opacity: 0; }
   100% {
     opacity: 1; } }
 
 .gallery__list {
   list-style: none;
-  margin-right: 10px; }
+  margin-right: 20px;
+  margin-bottom: 10px; }
 
 .gallery__link {
   width: 110px;
@@ -562,7 +566,10 @@ a {
   margin-bottom: 20px;
   font-weight: bold; }
   .primary-caption span {
-    color: #D05301; }
+    margin-left: 10px;
+    color: #D05301;
+    font-family: "Cabin_Sketch";
+    font-size: 0.9rem; }
 
 .primary-desc {
   font-family: "SortsMillGoudy"; }
