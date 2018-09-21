@@ -54,6 +54,13 @@
   src: url("../fonts/Volkhov/Volkhov-Regular.eot");
   src: url("../fonts/Volkhov/Volkhov-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Volkhov/Volkhov-Regular.woff") format("woff"), url("../fonts/Volkhov/Volkhov-Regular.ttf") format("truetype"); }
 
+@font-face {
+  font-family: "Populaire";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/Populaire/Populaire.eot");
+  src: url("../fonts/Populaire/Populaire.eot?#iefix") format("embedded-opentype"), url("../fonts/Populaire/Populaire.woff") format("woff"), url("../fonts/Populaire/Populaire.ttf") format("truetype"); }
+
 ::-webkit-input-placeholder {
   color: #ccc;
   -webkit-transition: 0.4s ease-in;
@@ -104,7 +111,7 @@ body {
   font-family: "roboto-example", sans-serif;
   overflow-x: hidden;
   background-color: #000;
-  color: #909091; }
+  color: #fff; }
 
 input,
 textarea {
@@ -123,7 +130,7 @@ textarea {
 
 a {
   text-decoration: none;
-  color: #909091; }
+  color: #fff; }
 
 .header {
   position: fixed;
@@ -140,9 +147,18 @@ a {
       width: 100%;
       height: 100%;
       cursor: pointer; }
+  .header .donate-flag {
+    position: absolute;
+    right: 40px;
+    top: 45px;
+    width: 70px;
+    height: 40px; }
+    .header .donate-flag img {
+      width: 100%;
+      height: 100%; }
 
 .header-menu__item {
-  padding: 8px 10px;
+  padding: 5px 10px;
   margin-left: 1.2rem;
   list-style: none;
   -webkit-border-radius: 3em;
@@ -156,10 +172,11 @@ a {
     font-family: "SortsMillGoudy";
     color: #fff;
     font-weight: bold;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 3px;
-    text-decoration: none; }
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #D05301; }
   .header-menu__item:hover {
     border: 2px solid #F1B930;
     -webkit-transition-duration: 0.3s;
@@ -177,8 +194,8 @@ a {
   -o-transition: 0.4s ease-in;
   transition: 0.4s ease-in; }
   .mobile-menu__item {
-    width: 50%;
-    margin: 0 auto; }
+    width: 35%;
+    margin: 20px auto; }
   .mobile-menu.show {
     -webkit-transition: 0.4s ease-in;
     -o-transition: 0.4s ease-in;
@@ -203,7 +220,7 @@ a {
     -webkit-border-radius: 4px;
             border-radius: 4px;
     width: 100%;
-    background-color: #909091;
+    background-color: #fff;
     top: 0;
     -webkit-transition: opacity .2s ease-in-out, -webkit-transform .2s ease-in-out;
     transition: opacity .2s ease-in-out, -webkit-transform .2s ease-in-out;
@@ -281,12 +298,12 @@ a {
   font-size: 0.8rem;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: #fff;
   background-color: transparent;
   -webkit-border-radius: 3%;
           border-radius: 3%;
-  padding: 5px 10px;
+  padding: 0 15px;
   border: 2px solid #F1B930;
   cursor: pointer;
   z-index: 2;
@@ -355,12 +372,7 @@ a {
   background-color: #fff; }
 
 .cat {
-  padding-top: 110px;
-  background-image: url("../img/leocat.jpg");
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
-  background-position: center; }
+  padding-top: 110px; }
   .cat.overlay {
     opacity: 0.3; }
 
@@ -405,7 +417,7 @@ a {
     top: 20px;
     right: 20px;
     width: 100px;
-    height: 90px; }
+    height: 100px; }
     .card-wrapper .front__logo img, .card-wrapper .back__logo img {
       width: 100%;
       height: 100%; }
@@ -414,16 +426,18 @@ a {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg); }
   .card-wrapper .back__logo {
-    top: 70%;
-    right: 35%;
+    top: 60%;
+    right: 50%;
+    margin-right: -50px;
     width: 100px;
     height: 90px; }
     .card-wrapper .back__logo img {
       -webkit-border-radius: 30%;
               border-radius: 30%; }
 
-.hover-paw:before {
-  font-size: 20px;
+.hover-paw {
+  width: 50px;
+  height: 30px;
   margin: 0px auto;
   -webkit-animation-name: 'hover-me';
           animation-name: 'hover-me';
@@ -431,6 +445,9 @@ a {
           animation-duration: 3s;
   -webkit-animation-iteration-count: 5;
           animation-iteration-count: 5; }
+  .hover-paw img {
+    width: 100%;
+    height: 100%; }
 
 @-webkit-keyframes hover-me {
   0% {
@@ -527,7 +544,9 @@ a {
   background-position: center; }
 
 .primary-caption {
-  color: #F1B930;
+  position: relative;
+  color: #fff;
+  padding: 5px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -536,15 +555,17 @@ a {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Vidaloka-Regular";
-  font-size: 1rem;
-  font-weight: normal;
+  font-family: "SortsMillGoudy";
+  font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 5px;
-  margin: 0.5rem 0 0.3rem; }
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  font-weight: bold; }
+  .primary-caption span {
+    color: #D05301; }
 
 .primary-desc {
-  font-family: "Volkhov"; }
+  font-family: "SortsMillGoudy"; }
 
 .animation {
   -webkit-transition-duration: 1s;
@@ -2637,7 +2658,7 @@ html {
 @media (max-width: 767.98px) {
   .header-wrapper {
     display: none; }
-  .gallery__list {
+  .header .gallery__list {
     margin-right: 0; } }
 
 /*==========  Mobile First  ==========*/

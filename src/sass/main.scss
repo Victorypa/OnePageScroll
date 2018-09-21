@@ -24,9 +24,9 @@ body {
   line-height: 1.65;
   font-family: $default-font;
   overflow-x: hidden;
-  background-color: $bgcolor;
-  color: $text-color;
 
+  background-color: $bgcolor;
+  color: $white;
 }
 
 input,
@@ -45,7 +45,7 @@ textarea {
 
 a {
   text-decoration: none;
-  color: $text-color;
+  color: $white;
 }
 
 .header {
@@ -70,11 +70,22 @@ a {
       cursor: pointer;
     }
   }
+
+  .donate-flag {  
+    position: absolute;
+    right: 40px;
+    top: 45px;
+    width: 70px;
+    height: 40px;
+    img {
+      @include img100;
+    }
+  }
 }
 
 .header-menu {
   &__item {
-    padding: 8px 10px;
+    padding: 5px 10px;
     margin-left: 1.2rem;
     list-style: none;
     
@@ -86,10 +97,11 @@ a {
       font-family: $sortmill;
       color: $white;
       font-weight: bold;
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 3px;
       text-decoration: none;
+      text-shadow: 1px 1px 0 $orange-hover;
     }
     &:hover {
       border: 2px solid $captionColor;
@@ -97,6 +109,7 @@ a {
       transition-duration: 0.3s;
       a {
         color: $captionColor;
+
       }
     }
 
@@ -110,8 +123,8 @@ a {
   background-color: $navbar-bg;
   @include transition;
   &__item {
-    width: 50%;
-    margin: 0 auto;
+    width: 35%;
+    margin: 20px auto;
   }
   &.show {
     @include transition;
@@ -137,7 +150,7 @@ a {
 		height: 3px;
 		border-radius: 4px;
 		width: 100%;
-		background-color: $text-color;
+		background-color: $white;
 		top: 0;
     transition: transform .2s ease-in-out, opacity .2s ease-in-out;
     &:nth-child(2), &:nth-child(3) {
@@ -217,12 +230,12 @@ a {
   font-size: 0.8rem;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: $white;
 
   background-color: transparent;
   border-radius: 3%;
-  padding: 5px 10px;
+  padding: 0 15px;
   border: 2px solid $captionColor;
   cursor: pointer;
   z-index: 2;
@@ -305,7 +318,7 @@ a {
     opacity: 0.3;
   }
   padding-top: 110px;
-  @include bgimage("leocat");
+  // @include bgimage("leocat");
  }
 
 .card-wrapper {
@@ -343,7 +356,7 @@ a {
       top: 20px;
       right: 20px;
       width: 100px;
-      height: 90px;
+      height: 100px;
       img {
         @include img100;
       }
@@ -352,8 +365,9 @@ a {
   .back {
     transform: rotateY(180deg);
     &__logo {
-      top: 70%;
-      right: 35%;
+      top: 60%;
+      right: 50%;
+      margin-right: -50px;
       width: 100px;
       height: 90px;
       img {
@@ -364,14 +378,25 @@ a {
 }
 
 .hover-paw {
-  &:before {
-  font-size: 20px;
+  width: 50px;
+  height: 30px;
   margin: 0px auto;
   animation-name: 'hover-me';
   animation-duration: 3s;
   animation-iteration-count: 5;
+  // &:before {
+  // font-size: 20px;
+  // margin: 0px auto;
+  // animation-name: 'hover-me';
+  // animation-duration: 3s;
+  // animation-iteration-count: 5;
+  // }
+  img {
+    width: 100%;
+    height: 100%;
   }
   @keyframes hover-me {
+
   0% {
     color: $white;
     }
@@ -452,19 +477,45 @@ a {
 }
 
 .primary-caption {
-  color: $captionColor;
+  // &:before, &:after {
+  //   border-style: solid;
+  //   border-width: 16px 5px;
+  //   content: "";
+  //   display: block;
+  //   height: 0;
+  //   width: 0;
+  //   position: absolute;
+  //   top: 0;
+  // }
+  // &:before {
+  //   border-color: #d96823 #d96823 transparent transparent;
+  //   left: -10px;
+  // }
+  position: relative;
+  // width: 20%;
+  color: $white;
+  padding: 5px;
+  // background-color: #d96823;
+
   display: flex;
   align-items: center;
-  font-family: $vidaloka;
-  font-size: 1rem;
-  font-weight: normal;
+  font-family: $sortmill;
+  font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 5px;
-  margin: 0.5rem 0 0.3rem;
+  letter-spacing: 4px;
+  // &:after {
+  //   border-color: #d96823 transparent transparent #d96823;
+  //   right: -10px;
+  // }
+  span {
+    color: $orange-hover;
+  }
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .primary-desc {
-  font-family: $volkhov;
+  font-family: $sortmill;
 }
 
 .animation {

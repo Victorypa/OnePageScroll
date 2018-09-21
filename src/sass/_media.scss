@@ -20,14 +20,16 @@
 
 //Small: ≥576px
 @include media-breakpoint-down(sm) {
-  .header-wrapper {
-    display: none;
-  }
-  .gallery__list {
-    margin-right: 0;
+  .header {
+    &-wrapper {
+      display: none;
+    }
+    .gallery__list {
+      margin-right: 0;
+    }
 
-  
   }
+
 }
 
 //Extra small: >0

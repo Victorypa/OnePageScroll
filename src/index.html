@@ -34,7 +34,7 @@
         </div>
 
         <!--Body-->
-        <div class="modal-body">
+        <div class="modal-body text-center">
           <div class="md-form mb-5">
             <i class="fa fa-user"></i>
             <input type="text" class="w-75 mx-2" id="form3">
@@ -80,8 +80,7 @@
           </li>
         </ul>
 
-        <div class="col-3 d-flex justify-content-end">
-
+        <div class="col-3 d-flex justify-content-end px-0">
           <ul class="social-icons d-flex mb-0">
             <li><a href="#" class="social-square"><i class="fa fa-facebook"></i></a></li>
             <li><a href="#" class="social-square"><i class="fa fa-instagram"></i></a></li>
@@ -89,6 +88,7 @@
 
           <button class="primary-button ml-3" data-toggle="modal" data-target="#donateModal">Donate<span></span></button>
         </div>
+        <!-- <div class="donate-flag"><img src="img/donate-flag-small.png" alt="donatesmall"></div> -->
       </div>
 
       <div class="mobile-menu text-center d-sm-block d-md-none">
@@ -112,7 +112,7 @@
           </li>
         </ul>
 
-        <button class="primary-button my-3" data-toggle="modal" data-target="#donateModal">Donate<span></span></button>
+        <button class="primary-button mb-4" data-toggle="modal" data-target="#donateModal">Donate<span></span></button>
 
       </div>
       <div class="col-2 pl-4">
@@ -135,24 +135,30 @@
       <div class="container h-100">
 
         <div class="row">
-          <div class="card-wrapper col-12 px-0">
-            <div class="card col-lg-4 col-12">
+          <div class="card-wrapper col-12">
+            <div class="card col-lg-4 col-12 pl-0">
               <div class="front text-justify">
+
                 <span>
                   <div class="front__logo">
                     <img src="img/homeagain.png" alt="homeagainlogo">
                   </div>
-                  <h1 class="primary-caption">species</h1>
-                  <div class="primary-desc">Cat</div>
-                  <h2 class="primary-caption">status</h2>
-                  <div class="primary-desc">Homeless</div>
-                  <h2 class="primary-caption">About</h2>
+                  <h1 class="primary-caption">species: <span>cat</span> </h1>
+                  <!-- <div class="primary-desc">Cat</div> -->
+                  <h2 class="primary-caption">status: <span>Homeless</span></h2>
+                  <!-- <div class="primary-desc">Homeless</div> -->
+                  <h2 class="primary-caption mb-1">About</h2>
                   <p class="primary-desc">Life on the streets isn’t easy for cats. While house
                     cats enjoy a pampered
                     existence, strays forced to live in the elements struggle every single day
                     to survive.
                   </p>
-                  <i class="fa fa-paw hover-paw hover-me d-block text-right"></i>
+                  <div class="div  hover-paw ">
+                        <img class="hover-me" src="img/arrow.png" alt="hover-me">
+                  </div>
+                 
+
+                  <!-- <i class="fa fa-paw hover-paw hover-me d-block text-right"></i> -->
                 </span>
               </div>
               <div class="back d-flex flex-column">
