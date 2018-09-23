@@ -113,6 +113,18 @@ body {
   background-color: #000;
   color: #fff; }
 
+.opacity {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2; }
+  .opacity.active {
+    display: block; }
+
 input,
 textarea {
   border: 1px solid #ccc;
@@ -342,7 +354,7 @@ a {
 
 .modal-donate {
   background-color: rgba(10, 10, 10, 0.98);
-  border: 1px solid #f1b93033; }
+  border: 1px solid rgba(240, 185, 45, 0.2); }
   .modal-donate__title {
     color: #F1B930;
     font-family: "Volkhov"; }
@@ -371,15 +383,15 @@ a {
   border: 2px solid #fff;
   background-color: #fff; }
 
+.cat, .bird, .fox, .dog {
+  padding-top: 110px; }
+
 .cat {
-  padding-top: 110px;
   background-image: url("../img/leocat.jpg");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
   background-position: center; }
-  .cat.overlay {
-    opacity: 0.3; }
 
 .card-wrapper .card {
   display: none;
@@ -450,8 +462,8 @@ a {
           animation-name: 'hover-me';
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
-  -webkit-animation-iteration-count: 3;
-          animation-iteration-count: 3; }
+  -webkit-animation-iteration-count: 5;
+          animation-iteration-count: 5; }
   .hover-360 img {
     width: 100%;
     height: 100%; }
@@ -530,22 +542,66 @@ a {
   -webkit-background-size: cover;
           background-size: cover;
   background-position: center;
-  background-position-x: 20%; }
+  background-position: top; }
+  .bird .front__logo {
+    top: 20px;
+    right: 15px;
+    width: 80px;
+    height: 75px; }
+  .bird .owl-carousel .carousel-pic {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto; }
+    .bird .owl-carousel .carousel-pic img {
+      width: 100%;
+      height: 100%;
+      cursor: pointer; }
+  .bird .owl-carousel .owl-nav button {
+    outline: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    -webkit-transition: 0.4s ease-in;
+    -o-transition: 0.4s ease-in;
+    transition: 0.4s ease-in; }
+    .bird .owl-carousel .owl-nav button:hover {
+      cursor: pointer;
+      -webkit-border-radius: 50%;
+              border-radius: 50%;
+      background-color: #D05301; }
+    .bird .owl-carousel .owl-nav button img {
+      width: 30px;
+      height: 30px; }
+  .bird .owl-carousel .owl-nav .owl-next {
+    right: 0; }
+  .bird .owl-carousel .owl-nav .owl-prev {
+    left: 0;
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg); }
 
 .fox {
   background-image: url("../img/fox.jpg");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
-  background-position: center;
-  background-position-x: 20%; }
-
-.dog {
-  background-image: url("../img/dog.jpg");
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
   background-position: center; }
+  .fox .front__logo {
+    top: 25px;
+    width: 85px;
+    height: 75px; }
+  .fox__total {
+    font-family: "Volkhov"; }
+    .fox__total .fa {
+      font-size: 30px;
+      color: #D05301; }
+    .fox__total span {
+      display: block;
+      font-family: "Populaire";
+      letter-spacing: 0.2rem;
+      font-size: 2rem;
+      color: #0F376F;
+      font-weight: bold; }
 
 .primary-caption {
   position: relative;
@@ -565,7 +621,7 @@ a {
   letter-spacing: 4px;
   margin-bottom: 20px;
   font-weight: bold; }
-  .primary-caption span {
+  .primary-caption span, .primary-caption--orange {
     margin-left: 10px;
     color: #D05301;
     font-family: "Cabin_Sketch";
@@ -573,6 +629,18 @@ a {
 
 .primary-desc {
   font-family: "SortsMillGoudy"; }
+
+.primary-link {
+  color: #D05301;
+  font-family: "Cabin_Sketch";
+  font-size: 1.1rem;
+  -webkit-transition: 0.4s ease-in;
+  -o-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+  text-transform: uppercase; }
+  .primary-link:hover {
+    text-decoration: none;
+    color: #fff; }
 
 .animation {
   -webkit-transition-duration: 1s;

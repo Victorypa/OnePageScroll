@@ -37,6 +37,7 @@ gulp.task('css-libs', ['sass'], () => {
 		'node_modules/bootstrap/dist/css/bootstrap.min.css',
 		'node_modules/onepage-scroll/onepage-scroll.css',
 		'node_modules/lightgallery/dist/css/lightgallery.css',
+		'node_modules/owl.carousel/dist/assets/owl.carousel.min.css',
 	])
 		.pipe(concat('libs.min.css'))
 		.pipe(cleancss({ level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
@@ -62,6 +63,7 @@ gulp.task('js', () => {
 		'node_modules/lightgallery/modules/lg-fullscreen.min.js',
 		'node_modules/lightgallery/modules/lg-zoom.min.js',
 		'node_modules/onepage-scroll/jquery.onepage-scroll.min.js',
+		'node_modules/owl.carousel/dist/owl.carousel.min.js',
 		'src/js/common.js', // Always at the end
 	])
 		.pipe(concat('scripts.min.js'))

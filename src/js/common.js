@@ -29,11 +29,18 @@ $(function () {
     event.preventDefault();
     $('.mobile-menu').toggleClass('show');
     $(this).toggleClass('active');
-    $('.cat').toggleClass('overlay');
+    $('.opacity').toggleClass('active');
   });
   
   $('#lightgallery').lightGallery({
     pager: true
   });
+
+  $('.owl-carousel').owlCarousel({
+    items:1,
+    nav: true,
+    navText: ["<img src='img/arrows.png'>", "<img src='img/arrows.png'>"],
+  }
+  );
 
 });

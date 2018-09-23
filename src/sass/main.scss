@@ -15,6 +15,7 @@
 html,
 body {
   height: 100%;
+
 }
 
 body {
@@ -27,6 +28,23 @@ body {
 
   background-color: $bgcolor;
   color: $white;
+}
+
+.opacity {
+  display: none;
+
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+
+	background-color: $opacity-bg;
+
+	z-index: 2;
+	&.active {
+		display: block;
+	}
 }
 
 input,
@@ -109,10 +127,8 @@ a {
       transition-duration: 0.3s;
       a {
         color: $captionColor;
-
       }
     }
-
   }
 }
 
@@ -275,7 +291,7 @@ a {
 .modal {
   &-donate {
     background-color: $navbar-bg;
-    border: 1px solid $shadow;
+    border: 1px solid $modalBorder;
     &__title {
       color: $captionColor;
       font-family: $volkhov;
@@ -313,11 +329,11 @@ a {
   }
 }
 
-.cat {
-  &.overlay {
-    opacity: 0.3;
-  }
+
+.cat, .bird, .fox, .dog {
   padding-top: 110px;
+}
+.cat {
   @include bgimage("leocat");
  }
 
@@ -385,7 +401,7 @@ a {
   height: 20px;
   animation-name: 'hover-me';
   animation-duration: 3s;
-  animation-iteration-count: 3;
+  animation-iteration-count: 5;
 
   img {
     width: 100%;
@@ -458,61 +474,114 @@ a {
 
 .bird {
   @include bgimage("orel");
-  background-position-x: 20%;
+  // background-position-x: 20%;
+  background-position: top;
+  .front__logo {
+    top: 20px;
+    right: 15px;
+    width: 80px;
+    height: 75px;
+  }
+  .owl-carousel {
+    .carousel-pic{
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      img {
+        @include img100;
+        cursor: pointer;
+      }
+    }
+    .owl-nav {
+      button {
+        outline: none;
+        position: absolute;
+        top: 50%;
+        margin-top: -30px;
+        @include transition;
+        &:hover {
+          cursor: pointer;
+          border-radius: 50%;
+          background-color: $orange-hover;
+        }
+        img{
+          width: 30px;
+          height: 30px;
+        }
+      }
+      .owl-next {
+        right: 0;
+      }
+      .owl-prev {
+        left: 0;
+        transform: rotate(180deg);
+      }
+    }
+  }
 }
 
 .fox {
   @include bgimage("fox");
-  background-position-x: 20%;
-}
-
-.dog {
-  @include bgimage("dog");
-}
-
-.primary-caption {
-  // &:before, &:after {
-  //   border-style: solid;
-  //   border-width: 16px 5px;
-  //   content: "";
-  //   display: block;
-  //   height: 0;
-  //   width: 0;
-  //   position: absolute;
-  //   top: 0;
-  // }
-  // &:before {
-  //   border-color: #d96823 #d96823 transparent transparent;
-  //   left: -10px;
-  // }
-  position: relative;
-  // width: 20%;
-  color: $white;
-  padding: 5px;
-  // background-color: #d96823;
-
-  display: flex;
-  align-items: center;
-  font-family: $sortmill;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  // &:after {
-  //   border-color: #d96823 transparent transparent #d96823;
-  //   right: -10px;
-  // }
-  span {
-    margin-left: 10px;
-    color: $orange-hover;
-    font-family: $cabinsketch;
-    font-size: 0.9rem;
+  // background-position-x: 20%;
+  .front__logo {
+    top: 25px;
+    width: 85px;
+    height: 75px;
   }
-  margin-bottom: 20px;
-  font-weight: bold;
+  &__total {
+   font-family: $volkhov;
+    .fa {
+      font-size: 30px;
+      color: $orange-hover;
+    }
+    span {
+      display: block;
+      font-family: $populaire;
+      letter-spacing: 0.2rem;
+      font-size: 2rem;
+      color: #0F376F;
+      font-weight: bold;
+    }
+  }
 }
 
-.primary-desc {
-  font-family: $sortmill;
+.primary {
+  &-caption {
+    position: relative;
+    color: $white;
+    padding: 5px;
+  
+    display: flex;
+    align-items: center;
+    font-family: $sortmill;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+    span, &--orange {
+      margin-left: 10px;
+      color: $orange-hover;
+      font-family: $cabinsketch;
+      font-size: 0.9rem;
+    }
+
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  &-desc {
+    font-family: $sortmill;
+  }
+  &-link {
+      color: $orange-hover;
+      font-family: $cabinsketch;
+      font-size: 1.1rem;
+      @include transition;
+      text-transform: uppercase;  
+    &:hover {
+      text-decoration: none;
+      color: $white;    
+    }
+  }
 }
 
 .animation {
@@ -522,8 +591,6 @@ a {
 .main-content {
   font-size: 0.8rem;
 }
-
-
 
 @import "media"; // Always at the end
 @import "default-styles";
