@@ -380,6 +380,13 @@ a {
 .cat, .bird, .fox, .dog {
   padding-top: 110px; }
 
+.cat {
+  background-image: url("../img/leocat.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center; }
+
 .card-wrapper .card {
   display: none;
   position: relative;
@@ -523,6 +530,11 @@ a {
     transition: opacity 0.3s ease 0s; }
 
 .bird {
+  background-image: url("../img/orel.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center;
   background-position: top; }
   .bird .front__logo {
     top: 20px;
@@ -561,23 +573,28 @@ a {
         -ms-transform: rotate(180deg);
             transform: rotate(180deg); }
 
-.fox .front__logo {
-  top: 25px;
-  width: 85px;
-  height: 75px; }
-
-.fox__total {
-  font-family: "Volkhov"; }
-  .fox__total .fa {
-    font-size: 35px;
-    color: #D05301; }
-  .fox__total span {
-    display: block;
-    font-family: "Populaire";
-    font-size: 2rem;
-    font-weight: bold;
-    color: #0F376F;
-    letter-spacing: 0.2rem; }
+.fox {
+  background-image: url("../img/fox.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center; }
+  .fox .front__logo {
+    top: 25px;
+    width: 85px;
+    height: 75px; }
+  .fox__total {
+    font-family: "Volkhov"; }
+    .fox__total .fa {
+      font-size: 35px;
+      color: #D05301; }
+    .fox__total span {
+      display: block;
+      font-family: "Populaire";
+      font-size: 2rem;
+      font-weight: bold;
+      color: #0F376F;
+      letter-spacing: 0.2rem; }
 
 .primary-caption {
   position: relative;
