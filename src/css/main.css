@@ -92,11 +92,11 @@
   transition: 0.4s ease-in; }
 
 ::-moz-selection {
-  background-color: orange;
+  background-color: #D05301;
   color: #fff; }
 
 ::selection {
-  background-color: orange;
+  background-color: #D05301;
   color: #fff; }
 
 html,
@@ -172,11 +172,11 @@ a {
 .header-menu__item {
   padding: 5px 10px;
   margin-left: 1.2rem;
-  list-style: none;
   -webkit-border-radius: 3em;
           border-radius: 3em;
   border: 2px solid rgba(10, 10, 10, 0.98);
   cursor: pointer;
+  list-style: none;
   -webkit-transition-duration: 0.3s;
        -o-transition-duration: 0.3s;
           transition-duration: 0.3s; }
@@ -190,17 +190,14 @@ a {
     text-decoration: none;
     text-shadow: 1px 1px 0 #D05301; }
   .header-menu__item:hover {
-    border: 2px solid #F1B930;
-    -webkit-transition-duration: 0.3s;
-         -o-transition-duration: 0.3s;
-            transition-duration: 0.3s; }
+    border: 2px solid #F1B930; }
     .header-menu__item:hover a {
       color: #F1B930; }
 
 .mobile-menu {
   position: fixed;
-  width: 100%;
   top: -100%;
+  width: 100%;
   background-color: rgba(10, 10, 10, 0.98);
   -webkit-transition: 0.4s ease-in;
   -o-transition: 0.4s ease-in;
@@ -209,9 +206,6 @@ a {
     width: 50%;
     margin: 20px auto; }
   .mobile-menu.show {
-    -webkit-transition: 0.4s ease-in;
-    -o-transition: 0.4s ease-in;
-    transition: 0.4s ease-in;
     top: 0;
     z-index: 2; }
 
@@ -228,12 +222,12 @@ a {
   transition: 0.4s ease-in; }
   .hamburger-button span {
     position: absolute;
+    top: 0;
     height: 3px;
+    width: 100%;
     -webkit-border-radius: 4px;
             border-radius: 4px;
-    width: 100%;
     background-color: #fff;
-    top: 0;
     -webkit-transition: opacity .2s ease-in-out, -webkit-transform .2s ease-in-out;
     transition: opacity .2s ease-in-out, -webkit-transform .2s ease-in-out;
     -o-transition: transform .2s ease-in-out, opacity .2s ease-in-out;
@@ -255,18 +249,18 @@ a {
             transform: rotate(-45deg); }
 
 .social-icons li {
-  list-style: none;
-  margin: 0.15em;
   position: relative;
-  font-size: 1em; }
+  font-size: 1em;
+  margin: 0.15em;
+  list-style: none; }
 
 .social-icons i {
-  color: #fff;
   position: absolute;
+  left: 50%;
   top: 50%;
   margin-top: -9px;
-  left: 50%;
   margin-left: -7px;
+  color: #fff;
   -webkit-transition: 0.4s ease-in;
   -o-transition: 0.4s ease-in;
   transition: 0.4s ease-in; }
@@ -312,10 +306,10 @@ a {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #fff;
+  padding: 0 15px;
   background-color: transparent;
   -webkit-border-radius: 3%;
           border-radius: 3%;
-  padding: 0 15px;
   border: 2px solid #F1B930;
   cursor: pointer;
   z-index: 2;
@@ -386,13 +380,6 @@ a {
 .cat, .bird, .fox, .dog {
   padding-top: 110px; }
 
-.cat {
-  background-image: url("../img/leocat.jpg");
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
-  background-position: center; }
-
 .card-wrapper .card {
   display: none;
   position: relative;
@@ -410,7 +397,6 @@ a {
 
 .card-wrapper .front, .card-wrapper .back {
   position: absolute;
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -419,13 +405,14 @@ a {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100%;
+  padding: 15px;
+  background-color: rgba(10, 10, 10, 0.98);
+  border: 2px solid #0d0d0d;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-border-radius: 10px;
           border-radius: 10px;
-  background-color: rgba(10, 10, 10, 0.98);
-  border: 2px solid #0d0d0d;
-  padding: 15px;
   -webkit-transition: 0.4s ease-in;
   -o-transition: 0.4s ease-in;
   transition: 0.4s ease-in; }
@@ -486,62 +473,56 @@ a {
   margin-bottom: 10px; }
 
 .gallery__link {
+  position: relative;
+  display: block;
   width: 110px;
   height: 85px;
   border: 2px solid #0d0d0d;
   -webkit-border-radius: 3px;
           border-radius: 3px;
-  display: block;
-  overflow: hidden;
-  position: relative; }
+  overflow: hidden; }
   .gallery__link:hover .gallery__overlay-icon {
     opacity: 1; }
   .gallery__link:hover .gallery__overlay {
-    background-color: rgba(0, 0, 0, 0.5); }
+    background-color: rgba(0, 0, 0, 0.7); }
   .gallery__link:hover .gallery__img {
     -webkit-transform: scale3d(1.1, 1.1, 1.1);
             transform: scale3d(1.1, 1.1, 1.1); }
 
 .gallery__img {
+  height: 100%;
+  width: 100%;
   -webkit-transition: -webkit-transform 0.15s ease 0s;
   transition: -webkit-transform 0.15s ease 0s;
   -o-transition: transform 0.15s ease 0s;
   transition: transform 0.15s ease 0s;
   transition: transform 0.15s ease 0s, -webkit-transform 0.15s ease 0s;
   -webkit-transform: scale3d(1, 1, 1);
-          transform: scale3d(1, 1, 1);
-  height: 100%;
-  width: 100%; }
+          transform: scale3d(1, 1, 1); }
 
 .gallery__overlay {
-  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
   bottom: 0;
   left: 0;
-  position: absolute;
   right: 0;
   top: 0;
   -webkit-transition: background-color 0.15s ease 0s;
   -o-transition: background-color 0.15s ease 0s;
   transition: background-color 0.15s ease 0s; }
   .gallery__overlay-icon {
+    position: absolute;
     left: 50%;
+    top: 50%;
+    font-size: 20px;
+    color: #fff;
     margin-left: -10px;
     margin-top: -10px;
     opacity: 0;
-    position: absolute;
-    top: 50%;
     -webkit-transition: opacity 0.3s ease 0s;
     -o-transition: opacity 0.3s ease 0s;
-    transition: opacity 0.3s ease 0s;
-    color: #fff;
-    font-size: 20px; }
+    transition: opacity 0.3s ease 0s; }
 
 .bird {
-  background-image: url("../img/orel.jpg");
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
-  background-position: center;
   background-position: top; }
   .bird .front__logo {
     top: 20px;
@@ -557,10 +538,10 @@ a {
       height: 100%;
       cursor: pointer; }
   .bird .owl-carousel .owl-nav button {
-    outline: none;
     position: absolute;
     top: 50%;
     margin-top: -30px;
+    outline: none;
     -webkit-transition: 0.4s ease-in;
     -o-transition: 0.4s ease-in;
     transition: 0.4s ease-in; }
@@ -580,33 +561,26 @@ a {
         -ms-transform: rotate(180deg);
             transform: rotate(180deg); }
 
-.fox {
-  background-image: url("../img/fox.jpg");
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
-  background-position: center; }
-  .fox .front__logo {
-    top: 25px;
-    width: 85px;
-    height: 75px; }
-  .fox__total {
-    font-family: "Volkhov"; }
-    .fox__total .fa {
-      font-size: 30px;
-      color: #D05301; }
-    .fox__total span {
-      display: block;
-      font-family: "Populaire";
-      letter-spacing: 0.2rem;
-      font-size: 2rem;
-      color: #0F376F;
-      font-weight: bold; }
+.fox .front__logo {
+  top: 25px;
+  width: 85px;
+  height: 75px; }
+
+.fox__total {
+  font-family: "Volkhov"; }
+  .fox__total .fa {
+    font-size: 35px;
+    color: #D05301; }
+  .fox__total span {
+    display: block;
+    font-family: "Populaire";
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0F376F;
+    letter-spacing: 0.2rem; }
 
 .primary-caption {
   position: relative;
-  color: #fff;
-  padding: 5px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -615,29 +589,39 @@ a {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 5px;
+  margin-bottom: 20px;
   font-family: "SortsMillGoudy";
   font-size: 0.7rem;
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 4px;
-  margin-bottom: 20px;
-  font-weight: bold; }
+  color: #fff; }
   .primary-caption span, .primary-caption--orange {
-    margin-left: 10px;
-    color: #D05301;
     font-family: "Cabin_Sketch";
-    font-size: 0.9rem; }
+    font-size: 0.9rem;
+    color: #D05301;
+    margin-left: 10px; }
 
 .primary-desc {
   font-family: "SortsMillGoudy"; }
+  .primary-desc a {
+    color: #F1B930;
+    -webkit-transition: 0.4s ease-in;
+    -o-transition: 0.4s ease-in;
+    transition: 0.4s ease-in; }
+    .primary-desc a:hover {
+      color: #D05301;
+      text-decoration: none; }
 
 .primary-link {
-  color: #D05301;
   font-family: "Cabin_Sketch";
   font-size: 1.1rem;
+  color: #D05301;
+  text-transform: uppercase;
   -webkit-transition: 0.4s ease-in;
   -o-transition: 0.4s ease-in;
-  transition: 0.4s ease-in;
-  text-transform: uppercase; }
+  transition: 0.4s ease-in; }
   .primary-link:hover {
     text-decoration: none;
     color: #fff; }
