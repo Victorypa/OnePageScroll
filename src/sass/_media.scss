@@ -16,6 +16,13 @@
 
 //Medium: ≥768px
 @include media-breakpoint-down(md) {
+  .header-menu {
+    font-size: 0.6rem;
+&__link {
+  padding: 5px 5px;
+  margin-left: 5px;
+}
+  }
 }
 
 //Small: ≥576px

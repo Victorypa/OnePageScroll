@@ -102,31 +102,24 @@ a {
 }
 
 .header-menu {
-  &__item {
+  font-family: $sortmill;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 0 $orange-hover;
+  list-style: none;
+  &__link {
+    display: block;
     padding: 5px 10px;
     margin-left: 1.2rem;
-  
     border-radius: 3em;
     border: 2px solid $navbar-bg;
-    cursor: pointer;
-        
-    list-style: none;
     transition-duration: 0.3s;
-    a {
-      font-family: $sortmill;
-      color: $white;
-      font-weight: bold;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      text-decoration: none;
-      text-shadow: 1px 1px 0 $orange-hover;
-    }
     &:hover {
+      color: $captionColor;
       border: 2px solid $captionColor;
-      a {
-        color: $captionColor;
-      }
+      text-decoration: none;
     }
   }
 }
@@ -301,12 +294,18 @@ a {
 }
 
 .modal {
-  &-donate {
+  &__donate {
     background-color: $navbar-bg;
     border: 1px solid $modalBorder;
-    &__title {
-      color: $captionColor;
-      font-family: $volkhov;
+  }
+  &__title {
+    color: $captionColor;
+    font-family: $volkhov;
+  }
+  &__close {
+    @include transition;
+    &:hover {
+      color: $orange-hover;
     }
   }
   .fa-user {
@@ -316,15 +315,21 @@ a {
     outline: none;
   }
   input {
-    border-radius: 3em;
-    &:hover {
+    border-radius: 4px;
+     &:focus {
       box-shadow: 0 0 1em $captionColor;
+    }
+    &::placeholder {
+      letter-spacing: 0.1rem;
     }
   }
   label {
     font-family: $volkhov;
     font-size: 0.75rem;
   }
+}
+  textarea, input {
+    font-family: "FontAwesome";
 }
 
 .onepage-pagination {
