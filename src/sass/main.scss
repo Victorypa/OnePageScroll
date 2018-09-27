@@ -86,6 +86,10 @@ a {
       @include img100;
       cursor: pointer;
     }
+    &--mobile {
+      width: 125px;
+      height: 80px;
+    }
   }
 
   .donate-flag {  
@@ -132,7 +136,8 @@ a {
   background-color: $navbar-bg;
   @include transition;
   &__item {
-    width:50%;
+    font-size: 0.9rem;
+    width:45%;
     margin: 20px auto;
   }
   &.show {
@@ -291,6 +296,9 @@ a {
   &:focus {
     outline: none;
   }
+  &--modal {
+
+  }
 }
 
 .modal {
@@ -346,6 +354,11 @@ a {
   }
 }
 
+// .fixed {
+//   position: fixed;
+//   width: 100%;
+// }
+
 
 .cat, .bird, .fox, .dog {
   padding-top: 110px;
@@ -396,6 +409,7 @@ a {
       img {
         @include img100;
       }
+
     }
   }
   .back {
