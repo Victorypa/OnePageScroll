@@ -40,7 +40,7 @@
           </div>
 
           <div class="md-form">
-            <input type="email" class="w-75 mx-2" id="form2" placeholder="&#xf0e0 Your email">     
+            <input type="email" class="w-75 mx-2" id="form2" placeholder="&#xf0e0 Your email">
           </div>
         </div>
 
@@ -57,56 +57,58 @@
 
     <div class="container-fluid px-0">
 
-      <div class="row header-wrapper align-items-center justify-content-between px-4">
+      <div class="row header-wrapper px-4">
         <div class="col-2 col-lg-1">
           <a href="#" class="header__logo">
             <img src="img/logo1.png" alt="logo">
           </a>
         </div>
-
-        <ul class="col-7 col-lg-8 header-menu d-flex mb-0 px-0 align-items-center">
-          <li class="header-menu__item">
-            <a href="#" class="header-menu__link">Species</a>
-          </li>
-          <li class="header-menu__item">
-            <a href="#" class="header-menu__link">About us</a>
-          </li>
-          <li class="header-menu__item">
-            <a href="#" class="header-menu__link">Our work</a>
-          </li>
-          <li class="header-menu__item">
-            <a href="#" class="header-menu__link">Get involved</a>
-          </li>
-        </ul>
-
-        <div class="col-3 d-flex justify-content-end">
-
-          <ul class="social-icons d-flex mb-0">
-            <li><a href="#" class="social-square"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#" class="social-square"><i class="fa fa-instagram"></i></a></li>
+        <div class="col-7 col-lg-8 ">
+          <ul class="header-menu mb-0 px-0 d-flex align-items-center">
+            <li class="header-menu__item">
+              <a href="#members" class="header-menu__link">Members</a>
+            </li>
+            <li class="header-menu__item">
+              <a href="#about" class="header-menu__link">About us</a>
+            </li>
+            <li class="header-menu__item">
+              <a href="#about" class="header-menu__link">Our work</a>
+            </li>
+            <li class="header-menu__item">
+              <a href="#" class="header-menu__link">Get involved</a>
+            </li>
           </ul>
-
-          <button class="primary-button ml-3" data-toggle="modal" data-target="#donateModal">Donate<span></span></button>
-
         </div>
 
+        <div class="col-3 ">
+          <div class="d-flex justify-content-end">
+
+            <ul class="social-icons d-flex mb-0">
+              <li><a href="#" class="social-square"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#" class="social-square"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+
+            <button class="primary-button ml-3" data-toggle="modal" data-target="#donateModal">Donate<span></span></button>
+
+          </div>
+        </div>
       </div>
 
-      <div class="mobile-menu text-center d-sm-block d-md-none">
+      <div class="mobile-menu d-sm-block d-md-none">
 
         <a href="#" class="header__logo header__logo--mobile m-auto">
           <img src="img/logo1.png" alt="logo">
         </a>
 
-        <ul class="px-0 align-items-center header-menu">
+        <ul class="px-0 header-menu">
           <li class="header-menu__item mobile-menu__item">
-            <a href="#" class="header-menu__link">Species</a>
+            <a href="#members" class="header-menu__link">Members</a>
           </li>
           <li class="header-menu__item mobile-menu__item">
-            <a href="#" class="header-menu__link">About us</a>
+            <a href="#about" class="header-menu__link">About us</a>
           </li>
           <li class="header-menu__item mobile-menu__item">
-            <a href="#" class="header-menu__link">Our work</a>
+            <a href="#about" class="header-menu__link">Our work</a>
           </li>
           <li class="header-menu__item mobile-menu__item">
             <a href="#" class="header-menu__link">Get involved</a>
@@ -129,259 +131,251 @@
 
   <div class="page-scroll-wrapper">
 
-    <section class="cat ">
+    <section class="cat">
 
       <div class="container h-100">
+        <div class="d-lg-flex content-wrapper">
+          <div class="row">
+            <div class="col-12 px-0">
+              <div class="card-wrapper">
+                <div class="col-lg-4 col-12 px-0">
+                  <div class="card">
+                    <div class="front text-justify">
+                      <span>
+                        <div class="front__logo">
+                          <img src="img/donate-flag-small.png" alt="donatesmall">
+                        </div>
+                        <h1 class="primary-caption">
+                          <i class="fa fa-paw"></i>
+                          species: <span>cat</span> </h1>
 
-        <div class="row">
+                        <h2 class="primary-caption">
+                          <i class="fa fa-paw"></i>
+                          status: <span>Homeless</span></h2>
 
-          <div class="card-wrapper col-12">
-            <div class="card col-lg-4 col-12 pl-0">
-              <div class="front text-justify">
-                <span>
-                  <div class="front__logo">
-                    <img src="img/donate-flag-small.png" alt="donatesmall">
+                        <h2 class="primary-caption mb-1">
+                          <i class="fa fa-paw"></i>About:</h2>
+
+                        <p class="primary-desc">Life on the streets isn’t easy for cats. While house
+                          cats enjoy a pampered
+                          existence, strays forced to live in the elements struggle every single day
+                          to survive.
+                        </p>
+
+                        <div class="div hover-360 ml-auto">
+                          <img class="hover-me" src="img/arrow.png" alt="hover-me">
+                        </div>
+
+                      </span>
+                    </div>
+
+                    <div class="back">
+
+                      <span class="text-center">
+                        <div class="back__logo">
+                          <img src="img/backlogo.png" alt="homeagainlogo">
+                        </div>
+
+                        <p class="primary-desc pt-3">We hope you will think of us when making gift
+                          <a href="mailto:donations.catadopt@shaw.ca">donations.catadopt@shaw.ca</a> or click button</p>
+                      </span>
+
+                      <button class="primary-button py-1" data-toggle="modal" data-target="#donateModal">Donate<span></span></button>
+
+                    </div>
                   </div>
-                  <h1 class="primary-caption">
-                    <i class="fa fa-paw"></i>
-                    species: <span>cat</span> </h1>
+                </div>
 
-                  <h2 class="primary-caption">
-                    <i class="fa fa-paw"></i>
-                    status: <span>Homeless</span></h2>
-
-                  <h2 class="primary-caption mb-1">
-                    <i class="fa fa-paw"></i>About:</h2>
-
-                  <p class="primary-desc">Life on the streets isn’t easy for cats. While house
-                    cats enjoy a pampered
-                    existence, strays forced to live in the elements struggle every single day
-                    to survive.
-                  </p>
-
-                  <div class="div hover-360 ml-auto">
-                    <img class="hover-me" src="img/arrow.png" alt="hover-me">
-                  </div>
-
-                </span>
               </div>
+            </div>
 
-              <div class="back d-flex flex-column">
+          </div>
 
-                <span class="text-center">
-                  <div class="back__logo">
-                    <img src="img/backlogo.png" alt="homeagainlogo">
-                  </div>
+          <div class="row col-lg-4 col-12 px-0">
+            <div class="gallery mt-md-5 mt-3">
+              <ul id="lightgallery" class="gallery__content">
+                  <li data-src="img/thumb4.jpg" class="gallery__list">
+                    <a class="gallery__link" href="#">
+                      <img class="gallery__img" src="img/thumb4.jpg">
+                      <div class="gallery__overlay">
+                        <i class="fa fa-search gallery__overlay-icon"></i>
+                      </div>
+                    </a>
+                  </li>
+                  <li data-src="img/thumb1.jpg" class="gallery__list">
+                    <a class="gallery__link" href="#">
+                      <img class="gallery__img" src="img/thumb1.jpg">
+                      <div class="gallery__overlay">
+                        <i class="fa fa-search gallery__overlay-icon"></i>
+                      </div>
+                    </a>
+                  </li>
+                  <li data-src="img/thumb2.jpg" class="gallery__list">
+                    <a class="gallery__link" href="#">
+                      <img class="gallery__img" src="img/thumb2.jpg">
+                      <div class="gallery__overlay">
+                        <i class="fa fa-search gallery__overlay-icon"></i>
+                      </div>
+                    </a>
+                  </li>
+                <li data-src="img/thumb7.jpg" class="gallery__list">
+                  <a class="gallery__link" href="#">
+                    <img class="gallery__img" src="img/thumb7.jpg">
+                    <div class="gallery__overlay">
+                      <i class="fa fa-search gallery__overlay-icon"></i>
+                    </div>
+                  </a>
+                </li>
+                <li data-src="img/thumb5.jpg" class="gallery__list">
+                  <a class="gallery__link" href="#">
+                    <img class="gallery__img" src="img/thumb5.jpg">
+                    <div class="gallery__overlay">
+                      <i class="fa fa-search gallery__overlay-icon"></i>
+                    </div>
+                  </a>
+                </li>
+                <li data-src="img/thumb6.jpg" class="gallery__list">
+                  <a class="gallery__link" href="#">
+                    <img class="gallery__img" src="img/thumb6.jpg">
+                    <div class="gallery__overlay">
+                      <i class="fa fa-search gallery__overlay-icon"></i>
+                    </div>
+                  </a>
+                </li>
+                <li data-src="img/thumb3.jpg" class="gallery__list">
+                  <a class="gallery__link" href="#">
+                    <img class="gallery__img" src="img/thumb3.jpg">
+                    <div class="gallery__overlay">
+                      <i class="fa fa-search gallery__overlay-icon"></i>
+                    </div>
+                  </a>
+                </li>
+                <li data-src="img/thumb8.jpg" class="gallery__list">
+                  <a class="gallery__link" href="#">
+                    <img class="gallery__img" src="img/thumb8.jpg">
+                    <div class="gallery__overlay">
+                      <i class="fa fa-search gallery__overlay-icon"></i>
+                    </div>
+                  </a>
+                </li>
+                <li data-src="img/thumb9.jpg" class="gallery__list">
+                  <a class="gallery__link" href="#">
+                    <img class="gallery__img" src="img/thumb9.jpg">
+                    <div class="gallery__overlay">
+                      <i class="fa fa-search gallery__overlay-icon"></i>
+                    </div>
+                  </a>
+                </li>
+                <li data-src="img/thumb10.jpg" class="gallery__list">
+                  <a class="gallery__link" href="#">
+                    <img class="gallery__img" src="img/thumb10.jpg">
+                    <div class="gallery__overlay">
+                      <i class="fa fa-search gallery__overlay-icon"></i>
+                    </div>
+                  </a>
+                </li>
+                <li data-src="img/thumb11.jpg" class="gallery__list">
+                  <a class="gallery__link" href="#">
+                    <img class="gallery__img" src="img/thumb11.jpg">
+                    <div class="gallery__overlay">
+                      <i class="fa fa-search gallery__overlay-icon"></i>
+                    </div>
+                  </a>
+                </li>
+                <li data-src="img/thumb12.jpg" class="gallery__list">
+                  <a class="gallery__link" href="#">
+                    <img class="gallery__img" src="img/thumb12.jpg">
+                    <div class="gallery__overlay">
+                      <i class="fa fa-search gallery__overlay-icon"></i>
+                    </div>
+                  </a>
+                </li>
 
-                  <p class="primary-desc pt-3">We hope you will think of us when making gift
-                    <a href="mailto:donations.catadopt@shaw.ca">donations.catadopt@shaw.ca</a> or click button</p>
-                </span>
-
-                <button class="primary-button ml-3 py-1" data-toggle="modal" data-target="#donateModal">Donate<span></span></button>
-
-              </div>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div class="row justify-content-lg-start justify-content-center col-5 ">
 
-          <div class="gallery mt-5">
-
-            <ul id="lightgallery" class="gallery__content">
-              <li data-src="img/thumb4.jpg" class="gallery__list">
-                <a class="gallery__link" href="#">
-                  <img class="gallery__img" src="img/thumb4.jpg">
-                  <div class="gallery__overlay">
-                    <i class="fa fa-search gallery__overlay-icon"></i>
-                  </div>
-                </a>
-              </li>
-              <li data-src="img/thumb4.jpg" class="gallery__list">
-                <a class="gallery__link" href="#">
-                  <img class="gallery__img" src="img/thumb4.jpg">
-                  <div class="gallery__overlay">
-                    <i class="fa fa-search gallery__overlay-icon"></i>
-                  </div>
-                </a>
-              </li>
-              <li data-src="img/thumb4.jpg" class="gallery__list">
-                <a class="gallery__link" href="#">
-                  <img class="gallery__img" src="img/thumb4.jpg">
-                  <div class="gallery__overlay">
-                    <i class="fa fa-search gallery__overlay-icon"></i>
-                  </div>
-                </a>
-              </li>
-              <li data-src="img/thumb4.jpg" class="gallery__list">
-                <a class="gallery__link" href="#">
-                  <img class="gallery__img" src="img/thumb4.jpg">
-                  <div class="gallery__overlay">
-                    <i class="fa fa-search gallery__overlay-icon"></i>
-                  </div>
-                </a>
-              </li>
-              <li data-src="img/thumb4.jpg" class="gallery__list">
-                <a class="gallery__link" href="#">
-                  <img class="gallery__img" src="img/thumb4.jpg">
-                  <div class="gallery__overlay">
-                    <i class="fa fa-search gallery__overlay-icon"></i>
-                  </div>
-                </a>
-              </li>
-              <li data-src="img/thumb4.jpg" class="gallery__list">
-                <a class="gallery__link" href="#">
-                  <img class="gallery__img" src="img/thumb4.jpg">
-                  <div class="gallery__overlay">
-                    <i class="fa fa-search gallery__overlay-icon"></i>
-                  </div>
-                </a>
-              </li>
-              <li data-src="img/thumb4.jpg" class="gallery__list">
-                <a class="gallery__link" href="#">
-                  <img class="gallery__img" src="img/thumb4.jpg">
-                  <div class="gallery__overlay">
-                    <i class="fa fa-search gallery__overlay-icon"></i>
-                  </div>
-                </a>
-              </li>
-              <li data-src="img/thumb4.jpg" class="gallery__list">
-                <a class="gallery__link" href="#">
-                  <img class="gallery__img" src="img/thumb4.jpg">
-                  <div class="gallery__overlay">
-                    <i class="fa fa-search gallery__overlay-icon"></i>
-                  </div>
-                </a>
-              </li>
-              <li data-src="img/thumb4.jpg" class="gallery__list">
-                <a class="gallery__link" href="#">
-                  <img class="gallery__img" src="img/thumb4.jpg">
-                  <div class="gallery__overlay">
-                    <i class="fa fa-search gallery__overlay-icon"></i>
-                  </div>
-                </a>
-              </li>
-              <li data-src="img/thumb4.jpg" class="gallery__list">
-                <a class="gallery__link" href="#">
-                  <img class="gallery__img" src="img/thumb4.jpg">
-                  <div class="gallery__overlay">
-                    <i class="fa fa-search gallery__overlay-icon"></i>
-                  </div>
-                </a>
-              </li>
-
-              <li data-src="img/thumb1.jpg" class="gallery__list">
-                <a class="gallery__link" href="#">
-                  <img class="gallery__img" src="img/thumb1.jpg">
-                  <div class="gallery__overlay">
-                    <i class="fa fa-search gallery__overlay-icon"></i>
-                  </div>
-                </a>
-              </li>
-
-              <li data-src="img/thumb2.jpg" class="gallery__list">
-                <a class="gallery__link" href="#">
-                  <img class="gallery__img" src="img/thumb2.jpg">
-                  <div class="gallery__overlay">
-                    <i class="fa fa-search gallery__overlay-icon"></i>
-                  </div>
-                </a>
-              </li>
-              <li data-src="img/thumb2.jpg" class="gallery__list">
-                <a class="gallery__link" href="#">
-                  <img class="gallery__img" src="img/thumb2.jpg">
-                  <div class="gallery__overlay">
-                    <i class="fa fa-search gallery__overlay-icon"></i>
-                  </div>
-                </a>
-              </li>
-              <li data-src="img/thumb2.jpg" class="gallery__list">
-                <a class="gallery__link" href="#">
-                  <img class="gallery__img" src="img/thumb2.jpg">
-                  <div class="gallery__overlay">
-                    <i class="fa fa-search gallery__overlay-icon"></i>
-                  </div>
-                </a>
-              </li>
-              <li data-src="img/thumb2.jpg" class="gallery__list">
-                <a class="gallery__link" href="#">
-                  <img class="gallery__img" src="img/thumb2.jpg">
-                  <div class="gallery__overlay">
-                    <i class="fa fa-search gallery__overlay-icon"></i>
-                  </div>
-                </a>
-              </li>
-            </ul>
-
-          </div>
-        </div>
       </div>
     </section>
 
-    <section class="bird animation">
+    <section class="bird animation" id="members">
 
       <div class="container h-100">
-
+          <div class="d-md-flex content-wrapper">
         <div class="row">
+          <div class="col-12 px-0">
+            <div class="card-wrapper">
+              <div class="col-lg-5 px-0">
+                <div class="card">
 
-          <div class="card-wrapper col-12">
-            <div class="card col-lg-5 col-12 pl-0">
-              
-              <div class="front text-justify">
-                <span>
+                  <div class="front text-justify">
+                    <span>
 
-                  <div class="front__logo">
-                    <img src="img/eaglelogo.png" alt="donatesmall">
+                      <div class="front__logo">
+                        <img src="img/eaglelogo.png" alt="donatesmall">
+                      </div>
+
+                      <h1 class="primary-caption">
+                        <i class="fa fa-pagelines"></i>
+                        species: <span>Eagle</span>
+                      </h1>
+
+                      <h2 class="primary-caption">
+                        <i class="fa fa-pagelines"></i>
+                        status: <span>Endangered</span>
+                      </h2>
+
+                      <h2 class="primary-caption mb-1">
+                        <i class="fa fa-pagelines"></i>About:</h2>
+
+                      <p class="primary-desc">These majestic birds almost disappeared in the last century, when
+                        pesticides
+                        caused eagle populations to plummet. Thanks to conservation efforts, they have recovered from
+                        the
+                        brink of extinction, but they still face serious threats.
+                      </p>
+
+                      <div class="div hover-360 ml-auto">
+                        <img class="hover-me" src="img/arrow.png" alt="hover-me">
+                      </div>
+
+                    </span>
                   </div>
 
-                  <h1 class="primary-caption">
-                    <i class="fa fa-pagelines"></i>
-                    species: <span>Eagle</span> 
-                  </h1>
+                  <div class="back">
+                    <span class="text-center">
 
-                  <h2 class="primary-caption">
-                    <i class="fa fa-pagelines"></i>
-                    status: <span>Endangered</span>
-                  </h2>
+                      <div class="primary-caption primary-caption--orange text-center"> Book: A Wild Success</div>
 
-                  <h2 class="primary-caption mb-1">
-                    <i class="fa fa-pagelines"></i>About:</h2>
+                      <p class="primary-desc pt-3">On the eve of the Endangered Species Act’s 40th anniversary we’ve
+                        asked
+                        a variety of interesting individuals from around the country to share their perspectives about
+                        the
+                        importance of wildlife.</p>
 
-                  <p class="primary-desc">These majestic birds almost disappeared in the last century, when pesticides
-                    caused eagle populations to plummet. Thanks to conservation efforts, they have recovered from the
-                    brink of extinction, but they still face serious threats.
-                  </p>
+                      <div class="text-right">
+                        <a class="primary-link text-right" href="#">Learn more
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
 
-                  <div class="div hover-360 ml-auto">
-                    <img class="hover-me" src="img/arrow.png" alt="hover-me">
+                    </span>
+
                   </div>
-
-                </span>
+                </div>
               </div>
 
-              <div class="back d-flex">
-                <span class="text-center">
-
-                  <div class="primary-caption primary-caption--orange text-center"> Book: A Wild Success</div>
-
-                  <p class="primary-desc pt-3">On the eve of the Endangered Species Act’s 40th anniversary we’ve asked
-                    a variety of interesting individuals from around the country to share their perspectives about the
-                    importance of wildlife.</p>
-
-                  <div class="text-right">
-                    <a class="primary-link text-right" href="#">Learn more
-                      <i class="fa fa-arrow-right"></i>
-                    </a>
-                  </div>
-
-                </span>
-
-              </div>
             </div>
           </div>
 
-          <div class="col-lg-5 text-center py-5">
-            <div class="primary-caption primary-caption--orange col-5 m-auto">Featured members</div>
+
+          <div class="col-lg-5 text-center my-5 owl-carousel__wrapper" >
+            <div class="col-5 m-auto">
+              <div class="primary-caption primary-caption--orange">Featured members</div>
+            </div>
+
             <div class="owl-carousel">
 
               <div class="carousel-pic"> <img src="img/owl-logo1.png" alt="sponsors"></div>
@@ -393,93 +387,108 @@
             </div>
           </div>
         </div>
+</div>
       </div>
     </section>
 
-    <section class="fox animation">
+    <section class="fox animation" id="about">
 
       <div class="container h-100">
-
+          <div class="d-md-flex content-wrapper">
         <div class="row">
+          <div class="col-12">
+            <div class="card-wrapper">
+              <div class="col-lg-5 col-12 pl-0 ml-auto">
+                <div class="card">
 
-          <div class="card-wrapper col-12">
-            <div class="card col-lg-5 col-12 pl-0 ml-auto">
-              
-              <div class="front text-justify">
-                <span>
+                  <div class="front text-justify">
+                    <span>
 
-                  <div class="front__logo">
-                    <img src="img/foxlogo.png" alt="donatesmall">
+                      <div class="front__logo">
+                        <img src="img/foxlogo.png" alt="donatesmall">
+                      </div>
+
+                      <h1 class="primary-caption">
+                        <i class="fa fa-pagelines"></i>
+                        species: <span>Fox</span>
+                      </h1>
+
+                      <h2 class="primary-caption">
+                        <i class="fa fa-pagelines"></i>
+                        status: <span>Endangered</span>
+                      </h2>
+
+                      <h2 class="primary-caption mb-1">
+                        <i class="fa fa-pagelines"></i>About:</h2>
+
+                      <p class="primary-desc">
+                        Foxes are suffering at fur farms. But you can help! I encourage you to take a look at the
+                        pictures
+                        of what it is like for a fox at the fur farm. By making a donation you can help the already
+                        rescued
+                        fur farm foxes thrive.
+                      </p>
+
+                      <div class="div hover-360 ml-auto">
+                        <img class="hover-me" src="img/arrow.png" alt="hover-me">
+                      </div>
+
+                    </span>
                   </div>
 
-                  <h1 class="primary-caption">
-                    <i class="fa fa-pagelines"></i>
-                    species: <span>Fox</span> 
-                  </h1>
+                  <div class="back">
+                    <span class="text-center">
+                      <div class="primary-caption primary-caption--orange text-center"> How you can help?</div>
 
-                  <h2 class="primary-caption">
-                    <i class="fa fa-pagelines"></i>
-                    status: <span>Endangered</span>
-                  </h2>
+                      <p class="primary-desc pt-3">We are very thankful for each and every person that has given to
+                        Save A
+                        Fox’s cause. Below are the three ways you can help rescue foxes from fur farms.</p>
 
-                  <h2 class="primary-caption mb-1">
-                    <i class="fa fa-pagelines"></i>About:</h2>
+                      <div class="text-right">
+                        <a class="primary-link text-right" href="#">Read about these ways
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </span>
 
-                  <p class="primary-desc">
-                    Foxes are suffering at fur farms. But you can help! I encourage you to take a look at the pictures
-                    of what it is like for a fox at the fur farm. By making a donation you can help the already rescued
-                    fur farm foxes thrive.
-                  </p>
-
-                  <div class="div hover-360 ml-auto">
-                    <img class="hover-me" src="img/arrow.png" alt="hover-me">
                   </div>
-
-                </span>
+                </div>
               </div>
 
-              <div class="back d-flex">
-                <span class="text-center">
-                  <div class="primary-caption primary-caption--orange text-center"> How you can help?</div>
-
-                  <p class="primary-desc pt-3">We are very thankful for each and every person that has given to Save A Fox’s cause. Below are the three ways you can help rescue foxes from fur farms.</p>
-
-                  <div class="text-right">
-                    <a class="primary-link text-right" href="#">Read about these ways
-                      <i class="fa fa-arrow-right"></i>
-                    </a>
-                  </div>
-                </span>
-
-              </div>
             </div>
           </div>
-
         </div>
 
         <div class="row">
           <div class="col-lg-5 ml-auto d-flex mt-5">
-
-            <div class="fox__total text-center col-4">
-              <i class="fa fa-paw"></i>
-              <span>48</span>
-              Total Foxes Rescued
+            <div class="col-4">
+              <div class="fox__total text-center">
+                <i class="fa fa-paw"></i>
+                <span>48</span>
+                Total Foxes Rescued
+              </div>
             </div>
 
-            <div class="fox__total text-center col-4">
-              <i class="fa fa-money"></i>
-              <span>10.000</span>
-              Total Foxes Rescued
+            <div class="col-4">
+              <div class="fox__total text-center">
+                <i class="fa fa-money"></i>
+                <span>10.000</span>
+                Online Donations
+              </div>
             </div>
 
-            <div class="fox__total text-center col-4">
-              <i class="fa fa-gift"></i>
-              <span>36</span>
-              Total Fox Adoptions
+            <div class="col-4">
+              <div class="fox__total text-center">
+                <i class="fa fa-gift"></i>
+                <span>36</span>
+                Total Fox Adoptions
+              </div>
             </div>
 
           </div>
         </div>
+        </div>
+
       </div>
     </section>
 
