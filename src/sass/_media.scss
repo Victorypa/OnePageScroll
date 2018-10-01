@@ -17,7 +17,7 @@
 //Medium: ≥768px
 @include media-breakpoint-down(md) {
   .header-menu {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
 &__link {
   padding: 5px 5px;
   margin-left: 5px;
@@ -38,12 +38,26 @@
   .onepage-pagination {
     display: none;
   }
+  .cat, .bird, .fox, .dog {
+    padding-top: 70px;
+  }
 
 }
 
 //Extra small: >0
 @include media-breakpoint-down(xs) {
-
+  .bird .front__logo {
+    top: 5px;
+    right: 5px;
+    width: 65px;
+    height: 60px;
+  }
+  .fox .front__logo {
+    top: 5px;
+    width: 60px;
+    height: 55px;
+  }
+  
 }
 
 /*==========  Mobile First  ==========*/
