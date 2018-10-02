@@ -32,18 +32,18 @@ body {
 .opacity {
   display: none;
 
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 
-	background-color: $opacity-bg;
+  background-color: $opacity-bg;
 
-	z-index: 2;
-	&.active {
-		display: block;
-	}
+  z-index: 2;
+  &.active {
+    display: block;
+  }
 }
 
 input,
@@ -94,7 +94,7 @@ a {
     }
   }
 
-  .donate-flag {  
+  .donate-flag {
     position: absolute;
     right: 40px;
     top: 45px;
@@ -147,7 +147,7 @@ a {
   @include transition;
   &__item {
     font-size: 0.9rem;
-    width:45%;
+    width: 45%;
     margin: 20px auto;
   }
   &.show {
@@ -159,13 +159,13 @@ a {
 .hamburger-button {
   display: block;
   position: absolute;
-  
-	top: 1rem;
+
+  top: 1rem;
   right: 1rem;
-  
-	width: 40px;
+
+  width: 40px;
   height: 34px;
-  
+
   z-index: 100;
   @include transition;
   span {
@@ -175,27 +175,29 @@ a {
     height: 3px;
     width: 100%;
 
-		border-radius: 4px;
-		background-color: $white;
+    border-radius: 4px;
+    background-color: $white;
 
-    transition: transform .2s ease-in-out, opacity .2s ease-in-out;
-    &:nth-child(2), &:nth-child(3) {
-			top: 13px;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    &:nth-child(2),
+    &:nth-child(3) {
+      top: 13px;
     }
     &:nth-child(4) {
-			top: 26px;
-		}
+      top: 26px;
+    }
   }
   &.active span {
-    &:nth-child(1), &:nth-child(4) {
-			opacity: 0;
+    &:nth-child(1),
+    &:nth-child(4) {
+      opacity: 0;
     }
     &:nth-child(2) {
-			transform: rotate(45deg);
+      transform: rotate(45deg);
     }
     &:nth-child(3) {
-			transform: rotate(-45deg);
-		}
+      transform: rotate(-45deg);
+    }
   }
 }
 
@@ -204,7 +206,7 @@ a {
     position: relative;
 
     font-size: 1em;
-  
+
     margin: 0.15em;
     list-style: none;
   }
@@ -308,6 +310,10 @@ a {
   }
 }
 
+.animation {
+  transition-duration: 1s;
+}
+
 .modal {
   &__donate {
     background-color: $navbar-bg;
@@ -326,12 +332,13 @@ a {
   .fa-user {
     font-size: 20px;
   }
-  .close:focus, span:focus {
+  .close:focus,
+  span:focus {
     outline: none;
   }
   input {
     border-radius: 4px;
-     &:focus {
+    &:focus {
       box-shadow: 0 0 1em $captionColor;
     }
     &::placeholder {
@@ -343,8 +350,9 @@ a {
     font-size: 0.75rem;
   }
 }
-  textarea, input {
-    font-family: "FontAwesome";
+textarea,
+input {
+  font-family: "FontAwesome";
 }
 
 .onepage-pagination {
@@ -363,17 +371,17 @@ a {
 
 .cat {
   @include bgimage("leocat");
- }
+}
 
 .card-wrapper {
   .card {
     display: none;
     position: relative;
-    
+
     min-height: 335px;
-  
+
     perspective: 1000px;
-   
+
     background-color: transparent;
     cursor: pointer;
     &:hover .front {
@@ -383,7 +391,8 @@ a {
       transform: rotateY(360deg);
     }
   }
-  .front, .back {
+  .front,
+  .back {
     position: absolute;
     display: flex;
     align-items: center;
@@ -391,7 +400,7 @@ a {
     height: 100%;
 
     padding: 15px;
- 
+
     background-color: $navbar-bg;
     border: 2px solid $borderColor;
     backface-visibility: hidden;
@@ -407,7 +416,6 @@ a {
       img {
         @include img100;
       }
-
     }
   }
   .back {
@@ -435,7 +443,7 @@ a {
   width: 35px;
   height: 20px;
 
-  animation-name: 'hover-me';
+  animation-name: "hover-me";
   animation-duration: 3s;
   animation-iteration-count: 5;
   img {
@@ -444,25 +452,25 @@ a {
   }
   @keyframes hover-me {
     0% {
-    opacity: 0;
+      opacity: 0;
     }
     100% {
-    opacity: 1;
+      opacity: 1;
     }
   }
 }
 
 .gallery {
-    height: 180px;
-    overflow: auto; 
- 
-    &__content {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      padding: 0; 
-      margin-bottom: 0;
-    }
+  height: 180px;
+  overflow: auto;
+
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-bottom: 0;
+  }
   &__list {
     list-style: none;
 
@@ -508,15 +516,15 @@ a {
     transition: background-color 0.15s ease 0s;
     &-icon {
       position: absolute;
-      left: 50%;      
+      left: 50%;
       top: 50%;
 
       font-size: 20px;
       color: $white;
-      
+
       margin-left: -10px;
       margin-top: -10px;
-      
+
       opacity: 0;
       transition: opacity 0.3s ease 0s;
     }
@@ -525,17 +533,15 @@ a {
 
 ::-webkit-scrollbar {
   width: 8px;
-  height: 5px; 
   &-track {
-  background-color: #32312e;
-  box-shadow: 0px 0px 3px #000 inset; 
-}
+    background-color: $borderColor;
+  }
   &-thumb {
-  border-radius: 5px;
-  background-color: #000;
-  box-shadow: 0px 0px 1px #fff inset; }
+    border-radius: 5px;
+    background-color: $bgcolor;
+    box-shadow: 0px 0px 1px $white inset;
+  }
 }
-
 
 .bird {
   @include bgimage("orel");
@@ -551,7 +557,7 @@ a {
     &__wrapper {
       background-color: $carousel-bg;
     }
-    .carousel-pic{
+    .carousel-pic {
       width: 100px;
       height: 100px;
 
@@ -567,14 +573,14 @@ a {
         top: 50%;
         margin-top: -30px;
 
-        outline: none;     
+        outline: none;
         @include transition;
         &:hover {
           cursor: pointer;
           border-radius: 50%;
           background-color: $orange-hover;
         }
-        img{
+        img {
           width: 30px;
           height: 30px;
         }
@@ -598,7 +604,7 @@ a {
     height: 75px;
   }
   &__total {
-   font-family: $volkhov;
+    font-family: $volkhov;
     .fa {
       font-size: 35px;
       color: $orange-hover;
@@ -610,28 +616,25 @@ a {
       font-size: 2rem;
       font-weight: bold;
       color: $total;
-      letter-spacing: 0.2rem;    
+      letter-spacing: 0.2rem;
     }
   }
 }
 
 .primary {
   &-caption {
-    position: relative;
-
     display: flex;
-    align-items: center; 
+    align-items: center;
 
-    padding: 5px;
-    margin-bottom: 20px;
-  
+    margin-bottom: 25px;
+
     font-family: $sortmill;
     font-size: 0.7rem;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 4px;
     color: $white;
-    span, &--orange {     
+    span {
       font-family: $cabinsketch;
       font-size: 0.9rem;
       color: $orange-hover;
@@ -650,25 +653,17 @@ a {
       }
     }
   }
-  &-link { 
-      font-family: $cabinsketch;
-      font-size: 1.1rem;
-      color: $orange-hover;
-      text-transform: uppercase;  
-      @include transition;   
+  &-link {
+    font-family: $cabinsketch;
+    font-size: 1.1rem;
+    color: $orange-hover;
+    text-transform: uppercase;
+    @include transition;
     &:hover {
       text-decoration: none;
-      color: $white;    
+      color: $white;
     }
   }
-}
-
-.animation {
-  transition-duration: 1s;
-}
-
-.main-content {
-  font-size: 0.8rem;
 }
 
 @import "media"; // Always at the end

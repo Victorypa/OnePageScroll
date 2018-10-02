@@ -5,23 +5,20 @@
 
 //Extra large: ≥1200px
 @include media-breakpoint-down(xl) {
-
 }
 
 //Large: ≥992px
 @include media-breakpoint-down(lg) {
-
 }
-
 
 //Medium: ≥768px
 @include media-breakpoint-down(md) {
   .header-menu {
     font-size: 0.5rem;
-&__link {
-  padding: 5px 5px;
-  margin-left: 5px;
-}
+    &__link {
+      padding: 5px 5px;
+      margin-left: 5px;
+    }
   }
 }
 
@@ -38,10 +35,19 @@
   .onepage-pagination {
     display: none;
   }
-  .cat, .bird, .fox, .dog {
+  .cat,
+  .bird,
+  .fox,
+  .dog {
     padding-top: 70px;
   }
 
+  .bird {
+    background-position-x: 75%;
+  }
+  .fox {
+    background-position-x: 10%;
+  }
 }
 
 //Extra small: >0
@@ -57,32 +63,26 @@
     width: 60px;
     height: 55px;
   }
-  
 }
 
 /*==========  Mobile First  ==========*/
 
 //Extra small: <576px
 @include media-breakpoint-up(xs) {
-
 }
 
 //Small: ≤576px
 @include media-breakpoint-up(sm) {
-
 }
 
 //Medium: ≤768px
 @include media-breakpoint-up(md) {
-
 }
 
 //Large: ≤992px
 @include media-breakpoint-up(lg) {
-
 }
 
 //Extra large: ≤1200px
 @include media-breakpoint-up(xl) {
-
 }
