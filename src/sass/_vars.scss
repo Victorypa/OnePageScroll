@@ -1,6 +1,7 @@
 @import "mixins/mixins";
 
-$default-font: "roboto-example", sans-serif;
+$default-font: "roboto-example",
+sans-serif;
 $main-font: "QuattrocentoSans";
 $cabinsketch: "Cabin_Sketch";
 $sortmill: "SortsMillGoudy";
@@ -14,20 +15,20 @@ $accent: $orange-hover;
 $bgcolor: #000;
 $borderColor: #0d0d0d;
 $white: #fff;
-$captionColor: #F1B930;	
-$modalBorder: rgba(240,185,45,0.2);
-$navbar-bg: rgba(10,10,10,0.98);
-$opacity-bg: rgba(0,0,0,0.7);
+$captionColor: #F1B930;
+$modalBorder: rgba(240, 185, 45, 0.2);
+$navbar-bg: rgba(10, 10, 10, 0.98);
+$opacity-bg: rgba(0, 0, 0, 0.7);
 $total: #0F376F;
-$carousel-bg: rgba(35,24,24,0.23);
+$carousel-bg: rgba(35, 24, 24, 0.23);
 
 
 
 
 // Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
-$grid-gutter-width: 30px;
-$grid-columns: 12;
-$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
-$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px);
+// $grid-gutter-width: 30px;
+// $grid-columns: 12;
+// $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+// $container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px);
 
-$gutter: $grid-gutter-width;
+// $gutter: $grid-gutter-width;
