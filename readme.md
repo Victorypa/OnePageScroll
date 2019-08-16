@@ -33,4 +33,5 @@
 ---
 
 ## Превью сайта
+
 <img src="src/img/mockup.jpg">
